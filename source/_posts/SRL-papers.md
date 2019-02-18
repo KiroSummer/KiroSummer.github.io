@@ -58,3 +58,6 @@ tags: [SRL]
 
 ## An Empirical Study of Building a Strong Baseline for Constituency Parsing
 在这边插播一个短语结构树句法的工作，本篇文章是 EMNLP2018年的一篇short。本文利用最近在 NLG领域一些比较新颖的技术来提升基于 sequence-to-sequence的 constitutency parsering。并且取得了比较好的结果。利用了一些技术，比如 subword（BPE），unknown token embedding as a bias, multi-task learning, output length controlling, pre-trained word embedding, model ensemble and LM reranking. 本文的实验结果还是比较详细的，能够从实验结果中看出每一个 technic带来的效益是多少。
+
+## Multi-Task Identification of Entities, Relations, and Coreference for Scientific Knowledge Graph Construction
+这篇文章是 18年 EMNLP的一篇文章，是华盛顿大学的一篇文章。本文利用了之前他们组的积累，span-based model来处理科学知识图谱的构建。将三个任务做一个multi-task learning，实体的识别，实体之间关系的识别，以及指代消歧。除了这个 multi-task learning的模块之外，本文还发布了一个数据集，并且在此基础上构建了科学知识图谱。
