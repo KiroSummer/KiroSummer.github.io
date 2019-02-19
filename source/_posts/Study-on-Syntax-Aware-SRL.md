@@ -7,6 +7,11 @@ tags:
 # 简介
 记录一下 Syntax-aware SRL的之后一些工作
 <!--more-->
+## end-to-end srl with paritial constituent trees
+### Experiments
+| __Path__| __说明__| __Dev FScore__| __iter__|
+|---------|---------|---------------|---------|
+|         |         |               |         |
 ## Sub-word for SRL 2018-10-3
 ### extract data 
 * Extract data from bllip.MIRA.DuDu.FULL.conll.out and generate sentences in a line format.
@@ -21,8 +26,8 @@ subword-nmt apply-bpe -c bpe.vocab.txt < conll05.train.txt.srl.sen.txt > conll05
 
 ## GCN相关 2018-9-19
 今天发现了一个非常奇怪的问题，在 GCN加入 gate之后，速度一下子由 24s -> 46s（同样的数据跑了 20次）。感觉很奇怪，记录一下这个问题，看看能不能找到原因。
-__ 原因__: 因为 gate需要 h进行计算，然而，最原始的输出也需要 h进行计算，最后的输出是由 gate*输出 因为反向传播，所以更新会非常慢。
-*告诉为父，主语孩儿你的语义标签是什么？告诉自己，我的语义标签是什么？告诉孩儿，父亲你的语义标签是什么？*
+__原因__: 因为 gate需要 h进行计算，然而，最原始的输出也需要 h进行计算，最后的输出是由 gate*输出 因为反向传播，所以更新会非常慢。*
+告诉为父，主语孩儿你的语义标签是什么？告诉自己，我的语义标签是什么？告诉孩儿，父亲你的语义标签是什么？
 
 记录一下关于 GCN的一些实验：
 
