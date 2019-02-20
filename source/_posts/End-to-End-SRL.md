@@ -7,6 +7,7 @@ tags: [SRL]
 # Introduction (2018-12-1)
 Begin the work on the end-to-end framework SRL.
 
+<!--more-->
 # Re-implementation of LSGN
 The following experiments are all conducted on the CoNLL-2005 dataset.
 ## w/o Gold predicates

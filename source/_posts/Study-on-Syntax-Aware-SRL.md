@@ -11,7 +11,11 @@ tags:
 ### Experiments
 | __Path__| __说明__| __Dev FScore__| __iter__|
 |---------|---------|---------------|---------|
-|         |         |               |         |
+|n126:~/e2e-srl-w-constituent-trees/exp-baseline  |最初版本的 e2e srl + partial constituent trees | 81.23%  | 232    |
+|n126:~/e2e-srl-w-constituent-trees/exp-baseline-w-30-length-spans| 使用 span length less than 30的 constituent trees | 81.56%| done |
+|n126:~/e2e-srl-w-constituent-trees/exp-baseline-w-joint-label | 尝试了一下利用 srl label + constituent trees label| 77.00% | done|
+|n126:~/e2e-srl-w-constituent-trees/exp-baseline-w-pos | 先尝试加入 pos tagging |80.85%    |done ｜
+|n126:~/e2e-srl-w-constituent-trees/exp-baseline-w-pos-softmax-weights | Add the softmax weights | 81.32% | done +0.5%|
 ## Sub-word for SRL 2018-10-3
 ### extract data 
 * Extract data from bllip.MIRA.DuDu.FULL.conll.out and generate sentences in a line format.
