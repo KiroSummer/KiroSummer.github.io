@@ -16,6 +16,11 @@ tags:
 |n126:~/e2e-srl-w-constituent-trees/exp-baseline-w-joint-label | 尝试了一下利用 srl label + constituent trees label| 77.00% | done|
 |n126:~/e2e-srl-w-constituent-trees/exp-baseline-w-pos | 先尝试加入 pos tagging |80.85%    |done ｜
 |n126:~/e2e-srl-w-constituent-trees/exp-baseline-w-pos-softmax-weights | Add the softmax weights | 81.32% | done +0.5%|
+|n126:~/e2e-srl-w-constituent-trees/exp-baseline-w-pos-softmax-weights-layer2 | feed the BiLSTM layer 2 into the pos classifier | 81.41% | done |
+
+__Conclusions__
+* Softmax weights is very useful.
+* Span length less than 30 should be add into the task.
 ## Sub-word for SRL 2018-10-3
 ### extract data 
 * Extract data from bllip.MIRA.DuDu.FULL.conll.out and generate sentences in a line format.
