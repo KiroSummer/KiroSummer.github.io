@@ -61,3 +61,7 @@ tags: [SRL]
 
 ## Multi-Task Identification of Entities, Relations, and Coreference for Scientific Knowledge Graph Construction
 这篇文章是 18年 EMNLP的一篇文章，是华盛顿大学的一篇文章。本文利用了之前他们组的积累，span-based model来处理科学知识图谱的构建。将三个任务做一个multi-task learning，实体的识别，实体之间关系的识别，以及指代消歧。除了这个 multi-task learning的模块之外，本文还发布了一个数据集，并且在此基础上构建了科学知识图谱。
+
+## Deep MultiTask Learning for Semantic Dependency Parsing
+本篇文章是 2017 ACL的一篇长文。文章的主要工作是提出了一个基于深度神经网络的框架来讲一个句子分析称3种语义依存图。本文的主要贡献有两个，1）提出了一个比较好的 baseline. 2）探究了两种应用于 multitask learning的方法：parameter sharing and higher-order structure scores.
+
