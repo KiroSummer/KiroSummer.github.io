@@ -17,6 +17,9 @@ tags:
 |n126:~/e2e-srl-w-constituent-trees/exp-baseline-w-pos | 先尝试加入 pos tagging |80.85%    |done ｜
 |n126:~/e2e-srl-w-constituent-trees/exp-baseline-w-pos-softmax-weights | Add the softmax weights | 81.32% | done +0.5%|
 |n126:~/e2e-srl-w-constituent-trees/exp-baseline-w-pos-softmax-weights-layer2 | feed the BiLSTM layer 2 into the pos classifier | 81.41% | done |
+|n126:~/e2e-srl-w-constituent-trees/exp-baseline-3-tasks  | 3 task multi-task learning | 81.19% | done|
+|n126:~/e2e-srl-w-constituent-trees/exp-baseline-w-pos-softmax-weights-layer1 | feed the BiLSTM layer 1 into the pos classifier | 81.43% | done |
+|n126:~/e2e-srl-w-constituent-trees/exp-baseline-w-pos-softmax-weights-layer2-layer-norm |BiLSTM layer 2 with layer norm | 80.90% | done| 
 
 __Conclusions__
 * Softmax weights is very useful.
