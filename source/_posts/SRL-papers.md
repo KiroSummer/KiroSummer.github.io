@@ -65,3 +65,5 @@ tags: [SRL]
 ## Deep MultiTask Learning for Semantic Dependency Parsing
 本篇文章是 2017 ACL的一篇长文。文章的主要工作是提出了一个基于深度神经网络的框架来讲一个句子分析称3种语义依存图。本文的主要贡献有两个，1）提出了一个比较好的 baseline. 2）探究了两种应用于 multitask learning的方法：parameter sharing and higher-order structure scores.
 
+## Graph Convolutional Networks for Text Classification
+本文是 AAAI2019的一篇工作，本文利用 GCN来处理文本分类，本文的主要贡献在于利用 GCN，将数据集的所有的 word以及 document是作为 node，然后通过建立邻接矩阵A，利用了两层 GCN来达到分类的目的。
