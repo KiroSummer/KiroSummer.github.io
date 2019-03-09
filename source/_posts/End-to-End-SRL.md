@@ -1,11 +1,25 @@
 ---
 title: End-to-End-SRL
-date: 2018-12-01 18:00:25
+date: 2019-01-30 18:00:25
 password: suda_kiro
 tags: [SRL]
 ---
 # Introduction (2018-12-1)
 Begin the work on the end-to-end framework SRL.
+
+# Trials on lsgn-extension (begin from 2019-3-1)
+
+| __Path__| __Devel__|  __Test WSJ__| __Test Brown__| __Comment__|
+|---------|----------|--------------|---------------|------------|
+|n126 ~/lsgn-extension/exp-baseline  |82.02  |82.76 |70.71 | | 
+|n126 ~/lsgn-extension/exp-baseline-re-run|81.53  |82.90 |70.63 | |
+|n126 ~/lsgn-extension/exp-baseline-lstm-layer1-for-predicate-prediction |81.74 |82.72 |70.77 | |
+|n126 ~/lsgn-extension/exp-baseline-sentence-level-span-attention |81.73 |82.81 |71.16 | |
+|n126 ~/lsgn-extension/exp-baseline-softmax-weights-in-srl-score |81.72 |82.9 |70.61 | |
+|n126 ~/lsgn-extension/exp-baseline-span-level-attention-based-BiLSTM |81.95 |82.77 |70.70% | |
+|n126 ~/lsgn-extension/exp-baseline-srl-using-biaffine-scorer |79.81 |81.71 |67.97 | |
+|n141 lsgn-extension/exp-baseline |81.86 |82.82 |70.62 | |
+|n141 lsgn-extension/exp-baseline-using-semi-CRF |81.67 |82.61 | 69.89 | |
 
 <!--more-->
 # Re-implementation of LSGN
