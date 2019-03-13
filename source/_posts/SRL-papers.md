@@ -53,7 +53,7 @@ tags: [SRL]
 本文在 CoNLL-2008和 CoNLL-2009的数据集上都取得了目前最高的结果。
 
 ## Syntactic Scaffolds for Semantic Structures
-本篇论文提出了一个利用 multi-task learning的方法利用短语结构句法树进行语义任务的处理，称之为句法“梯子”。
+本篇论文提出了一个利用 multi-task learning的方法利用短语结构句法树 (在 PropBank SRL实验上利用的是 OntoNotes 5.0，和 CoNLL-2012 SRL数据是完整重叠的。CoNLL-2012 SRL就是 OntoNotes 5.0)进行语义任务的处理，称之为句法“梯子”。
 模型主要通过将句法端的 span作为模型句法部分的训练目标；同时，在进行语义预测的时候，利用强化的 span表示进行 argument的预测：1）BiLSTM产生的上下文相关的表示；2）attention机制产生的 span summary；3）span的特征。
 
 ## An Empirical Study of Building a Strong Baseline for Constituency Parsing

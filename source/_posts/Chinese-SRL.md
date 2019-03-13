@@ -12,11 +12,24 @@ This post is for the work of Chinese Semantic Role Labeling. (2019-3-9)
 1. 句法对 SRL是有效果的，这些效果体现在什么地方？（Oracle transformation）
 2. 和 SRL数据不重合的句法数据能够带来的效益是多少？如果融入了 BERT之后，这些句法数据是否还能够体现出作用？
 3. 如何利用这些句法数据？有什么比较高效的方式？利用句法是利用 Dependency还是 Constituent。
+
 # Chinese SRL Papers
 ### A Progressive Learning Approach to Chinese SRL Using Heterogeneous Data
 本论文是 ACL 2017的长文。
 本文利用了 Progressive Neural Network结合 gated mechanism，将本论文发布的一个 SRL数据 CSB作为异构数据，来提升 CPB data的性能(+2.58)。
-中文的 SRL (Chinese PropBank 1.0)数据。
+中文的 SRL ([Chinese PropBank 1.0](https://catalog.ldc.upenn.edu/LDC2005T23))数据。
+### Capturing Argument Relationships for Chinese Semantic Role Labeling
+本论文是 EMNLP 2016的文章。
+本文利用了 quadratic optimization method来对 argument relationship (分为两种关系：compatible and incompatible arguments; 这种关系的分类在文章中使用最大熵分类器进行处理)进行建模，作为 BiLSTM基本模型的后处理手段，提升 Chinese SRL的性能 (+0.48%)。
+### Chinese Semantic Role Labeling with Bidirectional Recurrent Neural Networks
+本文是 2015年 EMNLP的文章。
+本文利用了 BiLSTM对 Chinese SRL进行处理，同时介绍了一个很方便的模型利用异构数据（在异构数据上，利用 BiLSTM训练一个模型，而后利用 fine-tuned word embeddings作为实验数据模型的 word embeddings）。
+### Chinese Semantic Role Labeling with Shallow Parsing
+本文是 2009 ACL的长文
+本文首先做了一个 Chinese shallow parser，然后在 shallow pasering和句法 chunking的基础之上，将 SRL看作是一个 sequence tagging problem，同时探究了很多特征模板（传统方法），利用 SVM分类器进行了试验。本文的系统架构分为两种：
+1. 一步策略：IOB2 representation
+2. 两步策略：先识别 boundaries，然后再识别 semantic type。
+
 ### Semantic Role Labeling for Learner Chinese: the Importance of Syntactic Parsing and L2-L1 Parallel Data
 本篇工作是 EMNLP 2018的长文。"L2 sentences": written by non-native speakers. "L1 sentences": written by native speakers. "interlanguage": 中介语。
 本篇论文研究了“中介语”的语义分析，将语义角色标注作为一个案例任务，汉语学习者书写的句子作为目标语言。
