@@ -21,6 +21,11 @@ word embeddings: context window size of 2 for *head word embedding*, window size
 ### 中文准备的数据
 SRL的数据：Chinese PropBank 1.0 (CPB)， 待续
 word embedding: 300dim, 待续 (我做过一个实验，就是可以选择不利用 head word embedding，实验结果和使用几乎一致，所以我们目前仅仅需要获取 300dim的中文 word embedding即可)
+*train the word embeddings with Giga chinese*
+使用 demo处理了 giga数据（分词），然后根据阈值（0.7）选取了部分数据（7120643句子），然后使用选取的这部分数据训练 word embedding。
+```bash
+time ./word2vec -train demo_Giga.txt.threshold.0.7.sentences.per.line.txt -output giga.demo.0.7.word.emb.txt -cbow 0 -size 300 -window 8 -negative 25 -hs 0 -sample 1e-4 -threads 20 -binary 0 -iter 15 -min-count 5
+```
 
 # Chinese SRL Papers
 ### A Progressive Learning Approach to Chinese SRL Using Heterogeneous Data
