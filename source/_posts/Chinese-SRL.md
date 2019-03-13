@@ -13,11 +13,22 @@ This post is for the work of Chinese Semantic Role Labeling. (2019-3-9)
 2. 和 SRL数据不重合的句法数据能够带来的效益是多少？如果融入了 BERT之后，这些句法数据是否还能够体现出作用？
 3. 如何利用这些句法数据？有什么比较高效的方式？利用句法是利用 Dependency还是 Constituent。
 
+# Chinese SRL Experiments
+## 数据准备：
+### LSGN 英文的数据
+SRL数据：CoNLL-2005, CoNLL-2012
+word embeddings: context window size of 2 for *head word embedding*, window size of 10 for LSTM inputs.
+### 中文准备的数据
+SRL的数据：Chinese PropBank 1.0 (CPB)， 待续
+word embedding: 300dim, 待续 (我做过一个实验，就是可以选择不利用 head word embedding，实验结果和使用几乎一致，所以我们目前仅仅需要获取 300dim的中文 word embedding即可)
+
 # Chinese SRL Papers
 ### A Progressive Learning Approach to Chinese SRL Using Heterogeneous Data
 本论文是 ACL 2017的长文。
 本文利用了 Progressive Neural Network结合 gated mechanism，将本论文发布的一个 SRL数据 CSB作为异构数据，来提升 CPB data的性能(+2.58)。
-中文的 SRL ([Chinese PropBank 1.0](https://catalog.ldc.upenn.edu/LDC2005T23))数据。
+1. 中文的 SRL ([Chinese PropBank 1.0](https://catalog.ldc.upenn.edu/LDC2005T23))数据。
+2. 本文的词性来自于 stanford parser.
+
 ### Capturing Argument Relationships for Chinese Semantic Role Labeling
 本论文是 EMNLP 2016的文章。
 本文利用了 quadratic optimization method来对 argument relationship (分为两种关系：compatible and incompatible arguments; 这种关系的分类在文章中使用最大熵分类器进行处理)进行建模，作为 BiLSTM基本模型的后处理手段，提升 Chinese SRL的性能 (+0.48%)。
