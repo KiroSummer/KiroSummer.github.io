@@ -34,6 +34,8 @@ time ./word2vec -train demo_Giga.txt.threshold.0.7.sentences.per.line.txt -outpu
 1. 中文的 SRL ([Chinese PropBank 1.0](https://catalog.ldc.upenn.edu/LDC2005T23))数据。
 2. 本文的词性来自于 stanford parser.
 
+### Labeling Chinese Predicates with Semantic Roles
+本论文的 section 2详细介绍了 CPB和 Nombank的语义标注。
 ### Capturing Argument Relationships for Chinese Semantic Role Labeling
 本论文是 EMNLP 2016的文章。
 本文利用了 quadratic optimization method来对 argument relationship (分为两种关系：compatible and incompatible arguments; 这种关系的分类在文章中使用最大熵分类器进行处理)进行建模，作为 BiLSTM基本模型的后处理手段，提升 Chinese SRL的性能 (+0.48%)。
