@@ -46,6 +46,11 @@ time ./word2vec -train demo_Giga.txt.threshold.0.7.sentences.per.line.txt -outpu
 
 ### Labeling Chinese Predicates with Semantic Roles
 本论文的 section 2详细介绍了 CPB和 Nombank的语义标注。
+### Annotating the Propositions in the Penn Chinese Treebank
+本论文介绍了一种在 Penn Chinese Treebank标注 propositions(命题)的方法。
+假设：如果一个谓词在不同的句子中具有相同的 sense，那么这些句子就具有相同的谓词、论元结构。
+arguments标注的标签 argN (N is the integer between 0 and 5)
+本论文还介绍了在标注过程中几个比较复杂的点：Split Arguments, Norminalizations.
 ### Capturing Argument Relationships for Chinese Semantic Role Labeling
 本论文是 EMNLP 2016的文章。
 本文利用了 quadratic optimization method来对 argument relationship (分为两种关系：compatible and incompatible arguments; 这种关系的分类在文章中使用最大熵分类器进行处理)进行建模，作为 BiLSTM基本模型的后处理手段，提升 Chinese SRL的性能 (+0.48%)。
