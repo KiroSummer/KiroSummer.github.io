@@ -35,7 +35,7 @@ time ./word2vec -train demo_Giga.txt.threshold.0.7.sentences.per.line.txt -outpu
 |n126 ~/Chinese-SRL/exp-baseline| 使用lsgn跑中文的实验|81.73%  |80.62%    |
 |n126 ~/Chinese-SRL/exp-baseline-fix-last-dev-sentence| 修正了 Dev最后一条数据因为没有 argument的计算问题|80.88%  |80.34% |
 |n126 ~/Chinese-SRL/exp-baseline-fix-last-dev-sentence-re-run| 同上，char emb size 100, output channel 100 |81.98%  |80.87% |
-|n126 ~/Chinese-SRL/exp-baseline-fix-then-adjust-cnn| 调整了 char cnn的相关参数 |81.6%    |81.32%  |
+|n126 ~/Chinese-SRL/exp-baseline-fix-then-adjust-cnn|同上，一模一样 |81.6%    |81.32%  |
 |n126 ~/Chinese-SRL/exp-baseline-fix-then-cnn-then-span-rep|调整了 span representation的公式，统一利用 BiLSTM的输出|  |  |
 
 # Chinese SRL Papers
@@ -52,6 +52,16 @@ time ./word2vec -train demo_Giga.txt.threshold.0.7.sentences.per.line.txt -outpu
 假设：如果一个谓词在不同的句子中具有相同的 sense，那么这些句子就具有相同的谓词、论元结构。
 arguments标注的标签 argN (N is the integer between 0 and 5)
 本论文还介绍了在标注过程中几个比较复杂的点：Split Arguments, Norminalizations.
+1. Split Arguments: 对于同一个 predicate，在一个句子中一个的 argument，也可以是另外一个句子中的多个 (2个) arguements。
+2. Nominalizations: 
+
+Implementation:
+1. create a lecical database. Each entry is a predicate listed with its framesets.
+2. list the set of posible semantic roles for each frameset with a mnemonic explanation (助记的解释)
+3. Annotator determines the syntactic frame of the predicate instance, and then determine which frameset this frame instantitates. __sense tagging__
+4. identifying the arguments and adjuncts for this predicate instance.
+
+Applications: Information Extraction
 ### Capturing Argument Relationships for Chinese Semantic Role Labeling
 本论文是 EMNLP 2016的文章。
 本文利用了 quadratic optimization method来对 argument relationship (分为两种关系：compatible and incompatible arguments; 这种关系的分类在文章中使用最大熵分类器进行处理)进行建模，作为 BiLSTM基本模型的后处理手段，提升 Chinese SRL的性能 (+0.48%)。
