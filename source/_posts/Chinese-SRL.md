@@ -34,7 +34,7 @@ time ./word2vec -train demo_Giga.txt.threshold.0.7.sentences.per.line.txt -outpu
 |---------|----------|--------|---------|
 |n126 ~/Chinese-SRL/exp-baseline| 使用lsgn跑中文的实验|81.73%  |80.62%    |
 |n126 ~/Chinese-SRL/exp-baseline-fix-last-dev-sentence| 修正了 Dev最后一条数据因为没有 argument的计算问题|80.88%  |80.34% |
-|n126 ~/Chinese-SRL/exp-baseline-fix-last-dev-sentence-re-run| 修正了 Dev最后一条数据因为没有 argument的计算问题|81.98%  |80.87% |
+|n126 ~/Chinese-SRL/exp-baseline-fix-last-dev-sentence-re-run| 同上，char emb size 100, output channel 100 |81.98%  |80.87% |
 |n126 ~/Chinese-SRL/exp-baseline-fix-then-adjust-cnn| 调整了 char cnn的相关参数 |    |    |
 |n126 ~/Chinese-SRL/exp-baseline-fix-then-cnn-then-span-rep|调整了 span representation的公式，统一利用 BiLSTM的输出|81.69% |81.32% |
 
