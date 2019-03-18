@@ -26,6 +26,15 @@ word embedding: 300dim, 待续 (我做过一个实验，就是可以选择不利
 ```bash
 time ./word2vec -train demo_Giga.txt.threshold.0.7.sentences.per.line.txt -output giga.demo.0.7.word.emb.txt -cbow 0 -size 300 -window 8 -negative 25 -hs 0 -sample 1e-4 -threads 20 -binary 0 -iter 15 -min-count 5
 ```
+*argument ratio, predicate ratio:*
+根据 Train集合测定 argument ratio, predicate ratio.
+
+|__argument ratio__|__覆盖率(%)__|__predicate ratio__|__覆盖率(%)__|
+|------------------|----------|-------------------|----------|
+|0.75              |90.9      |0.35               |98.2      |
+|0.8               |93.8      |0.4                |98.8      |
+|0.85              |95.8      |0.45               |99.2      |
+|0.9               |97.1      |0.5                |99.2      |
 
 ## 实验
 ### 基本模型的确定
