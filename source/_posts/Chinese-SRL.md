@@ -19,14 +19,14 @@ This post is for the work of Chinese Semantic Role Labeling. (2019-3-9)
 SRL数据：CoNLL-2005, CoNLL-2012
 word embeddings: context window size of 2 for *head word embedding*, window size of 10 for LSTM inputs.
 ### 中文准备的数据
-SRL的数据：Chinese PropBank 1.0 (CPB). Train: 8828; Dev: 561; Test:995.
-word embedding: 300dim, 待续 (我做过一个实验，就是可以选择不利用 head word embedding，实验结果和使用几乎一致，所以我们目前仅仅需要获取 300dim的中文 word embedding即可)
-*train the word embeddings with Giga chinese*
+__SRL的数据__：Chinese PropBank 1.0 (CPB). Train: 8828; Dev: 561; Test:995.
+__word embedding__: 300dim, 待续 (我做过一个实验，就是可以选择不利用 head word embedding，实验结果和使用几乎一致，所以我们目前仅仅需要获取 300dim的中文 word embedding即可)
+__train the word embeddings with Giga chinese__
 使用 demo处理了 giga数据（分词），然后根据阈值（0.7）选取了部分数据（7120643句子），然后使用选取的这部分数据训练 word embedding。
 ```bash
 time ./word2vec -train demo_Giga.txt.threshold.0.7.sentences.per.line.txt -output giga.demo.0.7.word.emb.txt -cbow 0 -size 300 -window 8 -negative 25 -hs 0 -sample 1e-4 -threads 20 -binary 0 -iter 15 -min-count 5
 ```
-*argument ratio, predicate ratio:*
+__argument ratio, predicate ratio:__
 根据 Train集合测定 argument ratio, predicate ratio.
 
 |__argument ratio__|__覆盖率(%)__|__predicate ratio__|__覆盖率(%)__|
@@ -35,6 +35,13 @@ time ./word2vec -train demo_Giga.txt.threshold.0.7.sentences.per.line.txt -outpu
 |0.8               |93.8      |0.4                |98.8      |
 |0.85              |95.8      |0.45               |99.2      |
 |0.9               |97.1      |0.5                |99.2      |
+
+抽取 word embeddings：
+1. Found 18811 words in 2 dataset(s); Kept 16225 out of 170991 lines. (SRL: train dev; 在两个数据文件中找到了 18811个 words，然后从 170991个 word embeddings里面能够找到 16225个)
+2. Found 23575 words in 3 dataset(s); Kept 16227 out of 170991 lines. (SRL: train dev; CDT-suda-format)
+
+__句法数据__
+1. 苏大规范的CDT数据，Train: 52423句
 
 ## 实验
 ### 基本模型的确定
@@ -46,6 +53,9 @@ time ./word2vec -train demo_Giga.txt.threshold.0.7.sentences.per.line.txt -outpu
 |n126 ~/Chinese-SRL/exp-baseline-fix-last-dev-sentence-re-run| 同上，char emb size 100, output channel 100 |81.98%  |80.87% |
 |n126 ~/Chinese-SRL/exp-baseline-fix-then-adjust-cnn|同上，一模一样 |81.6%    |81.32%  |
 |n126 ~/Chinese-SRL/exp-baseline-fix-then-cnn-then-span-rep|调整了 span representation的公式，统一利用 BiLSTM的输出|81.67%  |80.85%  |
+|n126 ~/Chinese-SRL/exp-baseline-fix-then-cnn-then-span-repre-re-run-2 |同上 | | |
+|n126 ~/Chinese-SRL/exp-baseline-try-stable |调整了迭代次数->180000, clip grad->1.0 | | |
+|n126 ~/Chinese-SRL/exp-baseline-sum-lstm-for-span|调整了 span representation的公式，直接 mean(lstm output) | | |
 
 # Chinese SRL Papers
 ### A Progressive Learning Approach to Chinese SRL Using Heterogeneous Data
