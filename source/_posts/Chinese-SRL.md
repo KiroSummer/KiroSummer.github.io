@@ -45,7 +45,7 @@ time ./word2vec -train demo_Giga.txt.threshold.0.7.sentences.per.line.txt -outpu
 |n126 ~/Chinese-SRL/exp-baseline-fix-last-dev-sentence| 修正了 Dev最后一条数据因为没有 argument的计算问题|80.88%  |80.34% |
 |n126 ~/Chinese-SRL/exp-baseline-fix-last-dev-sentence-re-run| 同上，char emb size 100, output channel 100 |81.98%  |80.87% |
 |n126 ~/Chinese-SRL/exp-baseline-fix-then-adjust-cnn|同上，一模一样 |81.6%    |81.32%  |
-|n126 ~/Chinese-SRL/exp-baseline-fix-then-cnn-then-span-rep|调整了 span representation的公式，统一利用 BiLSTM的输出|  |  |
+|n126 ~/Chinese-SRL/exp-baseline-fix-then-cnn-then-span-rep|调整了 span representation的公式，统一利用 BiLSTM的输出|81.67%  |80.85%  |
 
 # Chinese SRL Papers
 ### A Progressive Learning Approach to Chinese SRL Using Heterogeneous Data
@@ -56,6 +56,7 @@ time ./word2vec -train demo_Giga.txt.threshold.0.7.sentences.per.line.txt -outpu
 
 ### Labeling Chinese Predicates with Semantic Roles
 本论文的 section 2详细介绍了 CPB和 Nombank的语义标注。
+__Rel__是 predicate的标签？
 ### Annotating the Propositions in the Penn Chinese Treebank
 本论文介绍了一种在 Penn Chinese Treebank标注 propositions(命题)的方法。
 假设：如果一个谓词在不同的句子中具有相同的 sense，那么这些句子就具有相同的谓词、论元结构。
