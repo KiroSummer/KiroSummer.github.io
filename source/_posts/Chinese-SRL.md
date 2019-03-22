@@ -53,9 +53,9 @@ __句法数据__
 |n126 ~/Chinese-SRL/exp-baseline-fix-last-dev-sentence-re-run| 同上，char emb size 100, output channel 100 |81.98%  |80.87% |
 |n126 ~/Chinese-SRL/exp-baseline-fix-then-adjust-cnn|同上，一模一样 |81.6%    |81.32%  |
 |n126 ~/Chinese-SRL/exp-baseline-fix-then-cnn-then-span-rep|调整了 span representation的公式，统一利用 BiLSTM的输出|81.67%  |80.85%  |
-|n126 ~/Chinese-SRL/exp-baseline-fix-then-cnn-then-span-repre-re-run-2 |同上 | | |
-|n126 ~/Chinese-SRL/exp-baseline-try-stable |调整了迭代次数->180000, clip grad->1.0 | | |
-|n126 ~/Chinese-SRL/exp-baseline-sum-lstm-for-span|调整了 span representation的公式，直接 mean(lstm output) | | |
+|n126 ~/Chinese-SRL/exp-baseline-fix-then-cnn-then-span-repre-re-run-2 |同上 |81.31% |81.00% |
+|n126 ~/Chinese-SRL/exp-baseline-try-stable |调整了迭代次数->180000, clip grad->1.0 |81.57% |80.45% |
+|n126 ~/Chinese-SRL/exp-baseline-sum-lstm-for-span|调整了 span representation的公式，直接 mean(lstm output) |81.84% |80.48% |
 
 # Chinese SRL Papers
 ### A Progressive Learning Approach to Chinese SRL Using Heterogeneous Data
