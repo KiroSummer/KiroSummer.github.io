@@ -43,6 +43,17 @@ __argument ratio, predicate ratio:__
 __句法数据__
 1. 苏大规范的CDT数据，Train: 52423句
 
+|__数据名称__|__数据规模（句子数）__|
+|------------|----------------------|
+|BC-train.conll| 16339 |
+|comment-train.conll| 6885|
+|content-train.conll| 5129|
+|dialog-train.conll| 6897 |
+|finance-train.conll| 8738|
+|PKU-train.conll |10760|
+|renren-train.conll | 11286|
+|ZX-train.conll | 1645|
+
 ## 实验
 ### 基本模型的确定
 
