@@ -56,6 +56,10 @@ __句法数据__
 
 所有的句法数据均包含人工标注以及自动补全，总计：67679句
 
+__处理句法数据__
+1. 抽取 word embeddings
+2. 抽取 char dict
+
 ## 实验
 ### 基本模型的确定
 
@@ -69,6 +73,7 @@ __句法数据__
 |n126 ~/Chinese-SRL/exp-baseline-fix-then-cnn-then-span-repre-re-run-2 |同上 |81.31% |81.00% |
 |n126 ~/Chinese-SRL/exp-baseline-try-stable |调整了迭代次数->180000, clip grad->1.0 |81.57% |80.45% |
 |n126 ~/Chinese-SRL/exp-baseline-sum-lstm-for-span|调整了 span representation的公式，直接 mean(lstm output) |81.84% |80.48% |
+|n126 ~/Chinese-SRL/exp-baseline-sum-lstm-for-span-re-run2|同上 |81.99% |80.21% |
 
 # Chinese SRL Papers
 ### A Progressive Learning Approach to Chinese SRL Using Heterogeneous Data
