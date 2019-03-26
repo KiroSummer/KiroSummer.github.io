@@ -75,6 +75,16 @@ __处理句法数据__
 |n126 ~/Chinese-SRL/exp-baseline-sum-lstm-for-span|调整了 span representation的公式，直接 mean(lstm output) |81.84% |80.48% |
 |n126 ~/Chinese-SRL/exp-baseline-sum-lstm-for-span-re-run2|同上 |81.99% |80.21% |
 
+### 加入句法的尝试
+
+| __Path__| __Notes__| __Dev__| __Test__|
+|--------|----------|--------|---------|
+|n126 ~/Chinese-SRL/exp-baseline-sum-lstm-for-span| __Baseline__调整了 span representation的公式，直接 mean(lstm output) |81.84% |80.48% |
+|n126 ~/Chinese-SRL/exp-baseline-multitask-learningdep|初步加入句法模块，数据是 CDT-suda规范数据 |81.83% |  |
+|n126 ~/Chinese-SRL/exp-baseline-multitask-learningdep-all|代码如上，不过是数据换成了所有的 Dep数据 |81.25% |  |
+|n126 ~/Chinese-SRL/exp-baseline-multitask-learningdep-v2 |修改 Biaffine loss mean -> sum, 加入句法根据 prob prune的规则|82.47%  |ing  |
+|n126 ~/Chinese-SRL/exp-baseline-multitask-learningdep-v3 |修改模型的 backward算法，dep 和 srl分别 back |83.23%|ing  |
+
 # Chinese SRL Papers
 ### A Progressive Learning Approach to Chinese SRL Using Heterogeneous Data
 本论文是 ACL 2017的长文。
