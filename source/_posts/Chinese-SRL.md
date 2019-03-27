@@ -127,3 +127,6 @@ Applications: Information Extraction
 本篇论文研究了“中介语”的语义分析，将语义角色标注作为一个案例任务，汉语学习者书写的句子作为目标语言。
 L2-L1 parallel corpus contains 717,241 sentences. And this paper annotates 600 sentences for the predicate-argument structures.
 本文利用了Feng 2012的一个 SRL parser分别结合了 Berkeley parser和 minimal span-based parser作为额外的句法分析器，称之为 PCFGLA-parser-based和 neural-parser-based 系统，第三种就是 He 2017的工作，称之为 neural syntax-agnostic系统。
+### When is multitask learning effective? Semantic sequence prediction under varying data conditions.
+本文是 2017 EACL的一篇长文。MTL被广泛应用于很多任务，特别是语法学的任务。但是，很少有研究能够清楚的解释 MTL什么时候才会起作用。
+本文在 MTL的框架下研究了一些语义序列标注的任务。本文的实验结果表明：MTL并不是一直有用，当辅助性任务拥有简洁和一致的标签分布的时候，MTL才会适合。
