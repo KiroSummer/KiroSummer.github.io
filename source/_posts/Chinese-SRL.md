@@ -84,6 +84,7 @@ __处理句法数据__
 |n126 ~/Chinese-SRL/exp-baseline-multitask-learningdep-all|代码如上，不过是数据换成了所有的 Dep数据 |81.25% |  |
 |n126 ~/Chinese-SRL/exp-baseline-multitask-learningdep-v2 |修改 Biaffine loss mean -> sum, 加入句法根据 prob prune的规则|82.52%  |82.60% |
 |n126 ~/Chinese-SRL/exp-baseline-multitask-learningdep-v3 |修改模型的 backward算法，dep 和 srl分别 back |83.30%|83.09% |
+|n126 ~/Chinese-SRL/exp-baseline-MTL-dep-share-lstm-uppermost-hidden|将 syntax使用独有的 BiLSTM，然后将 dep\_BiLSTM output和 srl\_BiLSTM联合起来 | 82.95%| 82.89%|
 
 # Chinese SRL Papers
 ### A Progressive Learning Approach to Chinese SRL Using Heterogeneous Data
