@@ -88,6 +88,13 @@ __处理句法数据__
 |n126 ~/Chinese-SRL/exp-baseline-MTL-dep-share-lstm-uppermost-hidden|将 syntax使用独有的 BiLSTM，然后将 dep\_BiLSTM output和 srl\_BiLSTM联合起来 | 82.95%| 82.89%|
 |n126 ~/Chinese-SRL/exp-baseline-MTL-dep| 修改利用句法的形式，不再单纯的删除补全概率比较低的句子，改为不计算对应位置的 loss|83.36% |83.51% |
 |n126 ~/Chinese-SRL/exp-baseline-MTL-dep-ratio-0.6| 同上，但是概率修改为 0.6|83.22% |83.53% |
+|n126 ~/Chinese-SRL/exp-baseline-MTL-dep-ratio-0.4| 同上，但是概率修改为 0.4|83.12% |83.75% |
+|n126 ~/Chinese-SRL/exp-baseline-MTL-dep-ratio-0.2| 同上，但是概率修改为 0.2|83.22% |83.53% |
+|n126 ~/Chinese-SRL/exp-baseline-MTL-dep-share-2-specify-3| share lstm前两层，最后一层私有| 83.40%| 83.44%|
+
+总结：
+1. dep ratio pruning似乎对于模型的性能没有什么重要的影响，猜测的解释是：因为已经包含了全部的 dep语料，而且 dep中 ratio比较低的比较少吧。
+2. share lstm前两层和私有最后一层是一个可行的途径，性能几乎没有差别。
 
 # Chinese SRL Papers
 ### A Progressive Learning Approach to Chinese SRL Using Heterogeneous Data
