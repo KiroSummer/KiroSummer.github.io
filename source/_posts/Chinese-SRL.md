@@ -91,6 +91,10 @@ __处理句法数据__
 |n126 ~/Chinese-SRL/exp-baseline-MTL-dep-ratio-0.4| 同上，但是概率修改为 0.4|83.12% |83.75% |
 |n126 ~/Chinese-SRL/exp-baseline-MTL-dep-ratio-0.2| 同上，但是概率修改为 0.2|83.22% |83.53% |
 |n126 ~/Chinese-SRL/exp-baseline-MTL-dep-share-2-specify-3| share lstm前两层，最后一层私有| 83.40%| 83.44%|
+|n126 ~/Chinese-SRL/exp-baseline-MTL-dep-share-2-specify-3-w-attention|同上，不过 dep lstm加上了 softmax attention| 83.20%| 83.65%|
+|n126 ~/Chinese-SRL/exp-baseline-MTL-dep-share-2-specify-3-mlp-rep| share lstm前两层，最后一层私有，使用的是 MLP sum| 83.18%| 83.68%|
+|n126 ~/Chinese-SRL/exp-baseline-MTL-dep-share-2-specify-3-mlp-rep-w-dropou| 同上，加上了 dropout| 83.80% | 83.62%|
+|n126 ~/Chinese-SRL/exp-baseline-MTL-dep-share-2-3-mlp-rep-w-dropout-concat| 同上，concat| 83.22% | 83.45%|
 
 总结：
 1. dep ratio pruning似乎对于模型的性能没有什么重要的影响，猜测的解释是：因为已经包含了全部的 dep语料，而且 dep中 ratio比较低的比较少吧。
