@@ -95,10 +95,13 @@ __处理句法数据__
 |n126 ~/Chinese-SRL/exp-baseline-MTL-dep-share-2-specify-3-mlp-rep| share lstm前两层，最后一层私有，使用的是 MLP sum| 83.18%| 83.68%|
 |n126 ~/Chinese-SRL/exp-baseline-MTL-dep-share-2-specify-3-mlp-rep-w-dropou| 同上，加上了 dropout| 83.80% | 83.62%|
 |n126 ~/Chinese-SRL/exp-baseline-MTL-dep-share-2-3-mlp-rep-w-dropout-concat| 同上，concat| 83.22% | 83.45%|
+|n126 ~/Chinese-SRL/exp-baseline-MTL-dep-private-lstm-weighted-sum-as-input| dep BiLSTM weighted sum as SRL input| 83.39% | __83.91%__|
+|n126 ~/Chinese-SRL/exp-baseline-MTL-dep-soft-sharing-BiLSTM | dep BiLSTM soft sharing with SRL BiLSTM| 83.13% |82.24%| 
 
 总结：
 1. dep ratio pruning似乎对于模型的性能没有什么重要的影响，猜测的解释是：因为已经包含了全部的 dep语料，而且 dep中 ratio比较低的比较少吧。
 2. share lstm前两层和私有最后一层是一个可行的途径，性能几乎没有差别。
+3. dep BiLSTM weighted sum as SRL input __成了！__
 
 # Chinese SRL Papers
 ### A Progressive Learning Approach to Chinese SRL Using Heterogeneous Data
