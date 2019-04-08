@@ -97,6 +97,8 @@ __处理句法数据__
 |n126 ~/Chinese-SRL/exp-baseline-MTL-dep-share-2-3-mlp-rep-w-dropout-concat| 同上，concat| 83.22% | 83.45%|
 |n126 ~/Chinese-SRL/exp-baseline-MTL-dep-private-lstm-weighted-sum-as-input| dep BiLSTM weighted sum as SRL input| 83.39% | __83.91%__|
 |n126 ~/Chinese-SRL/exp-baseline-MTL-dep-soft-sharing-BiLSTM | dep BiLSTM soft sharing with SRL BiLSTM| 83.13% |82.24%| 
+|n126 ~/Chinese-SRL/exp-baseline-MTL-dep-private-lstm-weighted-sum-srl-biltm| dep BiLSTM weighted sum + SRL BiLSTM layer 3|82.85% | 82.43% |
+|n126 ~/Chinese-SRL/exp-baseline-MTL-dep-private-lstm-weighted-sum-srl-biltm-layer-2| dep BiLSTM weighted sum + SRL BiLSTM layer 2|83.42% | 83.52%|
 
 总结：
 1. dep ratio pruning似乎对于模型的性能没有什么重要的影响，猜测的解释是：因为已经包含了全部的 dep语料，而且 dep中 ratio比较低的比较少吧。
