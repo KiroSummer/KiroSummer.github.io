@@ -79,14 +79,14 @@ __处理句法数据__
 
 | __Path__| __Notes__| __Dev__| __Test__|
 |--------|----------|--------|---------|
-|n126 ~/Chinese-SRL/exp-baseline-sum-lstm-for-span| __Baseline__调整了 span representation的公式，直接 mean(lstm output) |81.84% |80.48% |
+|<font color="blue">n126 ~/Chinese-SRL/exp-baseline-sum-lstm-for-span</font>| __Baseline__调整了 span representation的公式，直接 mean(lstm output) |81.84% |80.48% |
 |n126 ~/Chinese-SRL/exp-baseline-multitask-learningdep|初步加入句法模块，数据是 CDT-suda规范数据 |81.83% |  |
 |n126 ~/Chinese-SRL/exp-baseline-multitask-learningdep-all|代码如上，不过是数据换成了所有的 Dep数据 |81.25% |  |
 |n126 ~/Chinese-SRL/exp-baseline-multitask-learningdep-v2 |修改 Biaffine loss mean -> sum, 加入句法根据 prob prune的规则|82.52%  |82.60% |
 |n126 ~/Chinese-SRL/exp-baseline-multitask-learningdep-v3 |修改模型的 backward算法，dep 和 srl分别 back |83.30%|83.09% |
 |n126 ~/Chinese-SRL/exp-baseline-multitask-learningdep-v3-re-run|同上，再跑一次，看看差距大不大|83.23% |83.46% |
 |n126 ~/Chinese-SRL/exp-baseline-MTL-dep-share-lstm-uppermost-hidden|将 syntax使用独有的 BiLSTM，然后将 dep\_BiLSTM output和 srl\_BiLSTM联合起来 | 82.95%| 82.89%|
-|n126 ~/Chinese-SRL/exp-baseline-MTL-dep| 修改利用句法的形式，不再单纯的删除补全概率比较低的句子，改为不计算对应位置的 loss|83.36% |83.51% |
+|<font color="blue">n126 ~/Chinese-SRL/exp-baseline-MTL-dep</font>| 修改利用句法的形式，不再单纯的删除补全概率比较低的句子，改为不计算对应位置的 loss|83.36% |83.51% |
 |n126 ~/Chinese-SRL/exp-baseline-MTL-dep-ratio-0.6| 同上，但是概率修改为 0.6|83.22% |83.53% |
 |n126 ~/Chinese-SRL/exp-baseline-MTL-dep-ratio-0.4| 同上，但是概率修改为 0.4|83.12% |83.75% |
 |n126 ~/Chinese-SRL/exp-baseline-MTL-dep-ratio-0.2| 同上，但是概率修改为 0.2|83.22% |83.53% |
@@ -95,7 +95,7 @@ __处理句法数据__
 |n126 ~/Chinese-SRL/exp-baseline-MTL-dep-share-2-specify-3-mlp-rep| share lstm前两层，最后一层私有，使用的是 MLP sum| 83.18%| 83.68%|
 |n126 ~/Chinese-SRL/exp-baseline-MTL-dep-share-2-specify-3-mlp-rep-w-dropou| 同上，加上了 dropout| 83.80% | 83.62%|
 |n126 ~/Chinese-SRL/exp-baseline-MTL-dep-share-2-3-mlp-rep-w-dropout-concat| 同上，concat| 83.22% | 83.45%|
-|n126 ~/Chinese-SRL/exp-baseline-MTL-dep-private-lstm-weighted-sum-as-input| dep BiLSTM weighted sum as SRL input| 83.39% | __83.91%__|
+|<font color="blue">n126 ~/Chinese-SRL/exp-baseline-MTL-dep-private-lstm-weighted-sum-as-input</font>| dep BiLSTM weighted sum as SRL input| 83.39% | __83.91%__|
 |n126 ~/Chinese-SRL/exp-baseline-MTL-dep-soft-sharing-BiLSTM | dep BiLSTM soft sharing with SRL BiLSTM| 83.13% |82.24%| 
 |n126 ~/Chinese-SRL/exp-baseline-MTL-dep-private-lstm-weighted-sum-srl-biltm| dep BiLSTM weighted sum + SRL BiLSTM layer 3|82.85% | 82.43% |
 |n126 ~/Chinese-SRL/exp-baseline-MTL-dep-private-lstm-weighted-sum-srl-biltm-layer-2| dep BiLSTM weighted sum + SRL BiLSTM layer 2|83.42% | 83.52%|
