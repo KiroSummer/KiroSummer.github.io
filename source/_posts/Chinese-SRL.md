@@ -105,6 +105,17 @@ __处理句法数据__
 2. share lstm前两层和私有最后一层是一个可行的途径，性能几乎没有差别。
 3. dep BiLSTM weighted sum as SRL input __成了！__
 
+### 加入 BERT的尝试
+如何加入句法：
+1. 下载 BERT-Base, Chinese模型参数，Chinese Simplified and Traditional, 12-layer, 768-hidden, 12-heads, 110M parameters.
+2. source activate tensorflow; 然后根据实际情况，修改 run.sh
+3. 将 bert转换成 h5py格式的文件。发现了 bert有点不太符合中文国情～（不识别一些中文标点符号，比如双引号。）。最后，我通过一些规避的策略，根据 original file进行了处理，搞定了转换成 h5py格式的文件。（mean for tokens in a word） 
+
+
+| __Path__| __Notes__| __Dev__| __Test__|
+|---------|----------|--------|---------|
+|         |          |        |         |
+
 # Chinese SRL Papers
 ### A Progressive Learning Approach to Chinese SRL Using Heterogeneous Data
 本论文是 ACL 2017的长文。
