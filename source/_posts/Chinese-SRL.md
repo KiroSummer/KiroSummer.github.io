@@ -114,8 +114,8 @@ __处理句法数据__
 | __Path__| __Notes__| __Dev__| __Test__|
 |---------|----------|--------|---------|
 |n126 ~/Chinese-SRL/exp-baseline-sum-lstm-for-span-re-run3  |Baseline    |82.13%    |80.60%   |
-|n126 ~/Chinese-SRL/exp-baseline-mean-with-bert|Baseline+BERT |  |   |
-|n126 ~/Chinese-SRL/exp-baseline-MTL-dep-with-ber|Baseline+BERT+dep hard sharing|  |  |
+|n126 ~/Chinese-SRL/exp-baseline-mean-with-bert|Baseline+BERT |86.27%  |   |
+|n126 ~/Chinese-SRL/exp-baseline-MTL-dep-with-bert|Baseline+BERT+dep hard sharing|86.77%  |  |
 |n126 ~/Chinese-SRL/exp-baseline-MTL-dep-private-lstm-weighted-sum-as-input-with-bert|Baseline+BERT+dep weighted sum as srl input|  |  |
 
 # Chinese SRL Papers
