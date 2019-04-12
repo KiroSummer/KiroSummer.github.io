@@ -111,10 +111,12 @@ __处理句法数据__
 2. source activate tensorflow; 然后根据实际情况，修改 run.sh
 3. 将 bert转换成 h5py格式的文件。发现了 bert有点不太符合中文国情～（不识别一些中文标点符号，比如双引号。）。最后，我通过一些规避的策略，根据 original file进行了处理，搞定了转换成 h5py格式的文件。（mean for tokens in a word） 
 
-
 | __Path__| __Notes__| __Dev__| __Test__|
 |---------|----------|--------|---------|
-|         |          |        |         |
+|n126 ~/Chinese-SRL/exp-baseline-sum-lstm-for-span-re-run3  |Baseline    |82.13%    |80.60%   |
+|n126 ~/Chinese-SRL/exp-baseline-mean-with-bert|Baseline+BERT |  |   |
+|n126 ~/Chinese-SRL/exp-baseline-MTL-dep-with-ber|Baseline+BERT+dep hard sharing|  |  |
+|n126 ~/Chinese-SRL/exp-baseline-MTL-dep-private-lstm-weighted-sum-as-input-with-bert|Baseline+BERT+dep weighted sum as srl input|  |  |
 
 # Chinese SRL Papers
 ### A Progressive Learning Approach to Chinese SRL Using Heterogeneous Data
