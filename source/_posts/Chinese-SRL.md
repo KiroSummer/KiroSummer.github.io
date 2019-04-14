@@ -116,9 +116,9 @@ __处理句法数据__
 |n126 ~/Chinese-SRL/exp-baseline-sum-lstm-for-span-re-run3  |Baseline    |82.13%    |80.60%   |
 |n126 ~/Chinese-SRL/exp-baseline-mean-with-bert|Baseline+BERT |86.27%  |86.61%   |
 |n126 ~/Chinese-SRL/exp-baseline-MTL-dep-with-bert|Baseline+BERT+dep hard sharing|86.77%  |87.03%  |
+|n126 ~/Chinese-SRL/exp-baseline-MTL-dep-with-bert-with-dep-bert|hard sharing方式，同时在 SRL和 Dep部分加入对应的 BERT特征| | |
 |n126 ~/Chinese-SRL/exp-baseline-MTL-dep-private-lstm-weighted-sum-as-input-with-bert|Baseline+BERT+dep weighted sum as srl input|85.39%  |86.25%  |
 |n126 ~/Chinese-SRL/exp-baseline-MTL-dep-private-lstm-weighted-sum-as-input-with-bert-fix-drop|同上，修正了 dropout的利用方式（bert features没有 dropout）| | |
-|n126 ~/Chinese-SRL/exp-baseline-MTL-dep-with-bert-with-dep-bert|hard sharing方式，同时在 SRL和 Dep部分加入对应的 BERT特征| | |
 |n126 ~/Chinese-SRL/exp-baseline-MTL-dep-private-lstm-weighted-sum-as-input-with-bert-with-dep-bert|weighted sum dep BiLSTM方式，同时在 SRL和 Dep部分加入对应的 BERT特征| | |
 |n126 ~/Chinese-SRL/exp-baseline-MTL-dep-private-lstm-weighted-sum-as-input-with-bert-with-dep-bert-fix-drop|同上，修正了dropout的利用方式(dep rep多了一次) |  |  |
 
