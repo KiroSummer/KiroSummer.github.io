@@ -41,7 +41,8 @@ __argument ratio, predicate ratio:__
 2. Found 23575 words in 3 dataset(s); Kept 16227 out of 170991 lines. (SRL: train dev; CDT-suda-format)
 
 __句法数据__
-1. 苏大规范的CDT数据，Train: 52423句
+1.苏大规范的数据列表 
+苏大规范的CDT数据（暂未使用），Train: 52423句
 
 |__数据名称__|__数据规模（句子数）__|
 |------------|----------------------|
@@ -55,6 +56,11 @@ __句法数据__
 |ZX-train.conll | 1645|
 
 所有的句法数据均包含人工标注以及自动补全，总计：67679句
+__查看 BC-train数据和 CPB1.0数据的重合程度__
+
+| __Train__| __Dev__| __Test__|
+|----------|--------|---------|
+|1319      |0       |0        |
 
 __处理句法数据__
 1. 抽取 word embeddings
