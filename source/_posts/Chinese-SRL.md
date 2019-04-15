@@ -67,6 +67,11 @@ __处理句法数据__
 2. 抽取 char dict
 
 ## 实验
+__待进行的实验__
+1. 句法相关：Tree-GRU的尝试
+2. BERT相关：1. average bert；2. fine tuning
+3. Dependency-based SRL：一系列的实验。
+
 ### 基本模型的确定
 
 | __Path__| __Notes__| __Dev__| __Test__|
