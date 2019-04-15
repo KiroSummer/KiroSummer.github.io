@@ -113,14 +113,18 @@ __处理句法数据__
 
 | __Path__| __Notes__| __Dev__| __Test__|
 |---------|----------|--------|---------|
-|n126 ~/Chinese-SRL/exp-baseline-sum-lstm-for-span-re-run3  |Baseline    |82.13%    |80.60%   |
-|n126 ~/Chinese-SRL/exp-baseline-mean-with-bert|Baseline+BERT |86.27%  |86.61%   |
-|n126 ~/Chinese-SRL/exp-baseline-MTL-dep-with-bert|Baseline+BERT+dep hard sharing|86.77%  |87.03%  |
+|<font color="blue">n126 ~/Chinese-SRL/exp-baseline-sum-lstm-for-span-re-run3</font>  |Baseline    |82.13%    |80.60%   |
+|<font color="blue">n126 ~/Chinese-SRL/exp-baseline-mean-with-bert</font>|Baseline+BERT |86.27%  |86.61%   |
+|<font color="blue">n126 ~/Chinese-SRL/exp-baseline-MTL-dep-with-bert</font>|Baseline+BERT+dep hard sharing|86.77%  |87.03%  |
 |n126 ~/Chinese-SRL/exp-baseline-MTL-dep-with-bert-with-dep-bert|hard sharing方式，同时在 SRL和 Dep部分加入对应的 BERT特征|86.51% |87.56% |
 |n126 ~/Chinese-SRL/exp-baseline-MTL-dep-private-lstm-weighted-sum-as-input-with-bert|Baseline+BERT+dep weighted sum as srl input|85.39%  |86.25%  |
-|n126 ~/Chinese-SRL/exp-baseline-MTL-dep-private-lstm-weighted-sum-as-input-with-bert-fix-drop|同上，修正了 dropout的利用方式（bert features没有 dropout）|86.81% |87.54% |
+|<font color="blue">n126 ~/Chinese-SRL/exp-baseline-MTL-dep-private-lstm-weighted-sum-as-input-with-bert-fix-drop</font>|同上，修正了 dropout的利用方式（bert features没有 dropout）|86.81% |87.54% |
 |n126 ~/Chinese-SRL/exp-baseline-MTL-dep-private-lstm-weighted-sum-as-input-with-bert-with-dep-bert|weighted sum dep BiLSTM方式，同时在 SRL和 Dep部分加入对应的 BERT特征|87.08% |87.62% |
 |n126 ~/Chinese-SRL/exp-baseline-MTL-dep-private-lstm-weighted-sum-as-input-with-bert-with-dep-bert-fix-drop|同上，修正了dropout的利用方式(dep rep多了一次) |86.94%  |87.69%  |
+
+# Dependency-based SRL (semantic dependency parsing)
+CoNLL-2008提出这个任务。一般分为 谓词识别和分歧，论元的识别和分类。
+CoNLL-2008只是一个英文的任务，而CoNLL-2009是一个多语言的任务。并且在 CoNLL-2009中，谓词已经被标出。
 
 # Chinese SRL Papers
 ### A Progressive Learning Approach to Chinese SRL Using Heterogeneous Data
