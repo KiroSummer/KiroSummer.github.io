@@ -127,6 +127,7 @@ __待进行的实验__
 |---------|----------|--------|---------|
 |<font color="blue">n126 ~/Chinese-SRL/exp-baseline-sum-lstm-for-span-re-run3</font>  |Baseline    |82.13%    |80.60%   |
 |<font color="blue">n126 ~/Chinese-SRL/exp-baseline-mean-with-bert</font>|Baseline+BERT |86.27%  |86.61%   |
+|<font color="blue">n126 ~/Chinese-SRL/exp-baseline-mean-with-bert-average</font>|Baseline+BERT(avg) |86.36%  |86.89%   |
 |<font color="blue">n126 ~/Chinese-SRL/exp-baseline-MTL-dep-with-bert</font>|Baseline+BERT+dep hard sharing|86.77%  |87.03%  |
 |n126 ~/Chinese-SRL/exp-baseline-MTL-dep-with-bert-with-dep-bert|hard sharing方式，同时在 SRL和 Dep部分加入对应的 BERT特征|86.51% |87.56% |
 |n126 ~/Chinese-SRL/exp-baseline-MTL-dep-private-lstm-weighted-sum-as-input-with-bert|Baseline+BERT+dep weighted sum as srl input|85.39%  |86.25%  |
