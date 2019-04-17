@@ -26,6 +26,10 @@ __train the word embeddings with Giga chinese__
 ```bash
 time ./word2vec -train demo_Giga.txt.threshold.0.7.sentences.per.line.txt -output giga.demo.0.7.word.emb.txt -cbow 0 -size 300 -window 8 -negative 25 -hs 0 -sample 1e-4 -threads 20 -binary 0 -iter 15 -min-count 5
 ```
+__CoNLL-2009数据处理__
+1. train中 16070句话，“李茂“”之后多了一个双引号，被我删除掉了。
+2. Found 86551 words in 3 dataset(s); Kept 48341 out of 170991 lines. (SRL: train, dev; ALL dep data from xpeng)
+
 __argument ratio, predicate ratio:__
 根据 Train集合测定 argument ratio, predicate ratio.
 
@@ -39,6 +43,7 @@ __argument ratio, predicate ratio:__
 抽取 word embeddings：
 1. Found 18811 words in 2 dataset(s); Kept 16225 out of 170991 lines. (SRL: train dev; 在两个数据文件中找到了 18811个 words，然后从 170991个 word embeddings里面能够找到 16225个)
 2. Found 23575 words in 3 dataset(s); Kept 16227 out of 170991 lines. (SRL: train dev; CDT-suda-format)
+3. Found 74079 words in 3 dataset(s); Kept 43321 out of 170991 lines. (SRL: train dev; dep\_all from xpeng)
 
 __句法数据__
 1.苏大规范的数据列表 
