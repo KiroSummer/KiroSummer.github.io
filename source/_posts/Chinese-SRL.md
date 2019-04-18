@@ -151,6 +151,10 @@ __结论__:
 CoNLL-2008提出这个任务。一般分为 谓词识别和分歧，论元的识别和分类。
 CoNLL-2008只是一个英文的任务，而CoNLL-2009是一个多语言的任务。并且在 CoNLL-2009中，谓词已经被标出。
 
+## predicate identification and disambiguation
+使用 mate-tools（引用）进行处理：这个工具可以百分百识别 predicate。predicate sense。处理之后的 Accuracy：
+Train: 99.01 (101798 / 102813) Dev: 94.87 (7687 / 8103) Test: 94.91 (11657 / 12282)
+
 # Chinese SRL Papers
 ### A Progressive Learning Approach to Chinese SRL Using Heterogeneous Data
 本论文是 ACL 2017的长文。
