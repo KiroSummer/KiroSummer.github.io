@@ -113,6 +113,7 @@ __待进行的实验__
 |n126 ~/Chinese-SRL/exp-baseline-MTL-dep-share-2-specify-3-mlp-rep-w-dropou| 同上，加上了 dropout| 83.80% | 83.62%|
 |n126 ~/Chinese-SRL/exp-baseline-MTL-dep-share-2-3-mlp-rep-w-dropout-concat| 同上，concat| 83.22% | 83.45%|
 |<font color="blue">n126 ~/Chinese-SRL/exp-baseline-MTL-dep-private-lstm-weighted-sum-as-input</font>| dep BiLSTM weighted sum as SRL input| 83.39% | __83.91%__|
+|<font color="gray">n126 ~/Chinese-SRL/exp-baseline-MTL-dep-private-lstm-weighted-sum-as-input-avg</font>| dep BiLSTM average as SRL input| 83.53% | 83.63%|
 |n126 ~/Chinese-SRL/exp-baseline-MTL-dep-private-lstm-weighted-sum-as-input-avg| dep BiLSTM avg as SRL input|  |  |
 |n126 ~/Chinese-SRL/exp-baseline-MTL-dep-soft-sharing-BiLSTM | dep BiLSTM soft sharing with SRL BiLSTM| 83.13% |82.24%| 
 |n126 ~/Chinese-SRL/exp-baseline-MTL-dep-private-lstm-weighted-sum-srl-biltm| dep BiLSTM weighted sum + SRL BiLSTM layer 3|82.85% | 82.43% |
