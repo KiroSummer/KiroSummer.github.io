@@ -156,6 +156,12 @@ CoNLL-2008只是一个英文的任务，而CoNLL-2009是一个多语言的任务
 使用 mate-tools（引用）进行处理：这个工具可以百分百识别 predicate。predicate sense。处理之后的 Accuracy：
 Train: 99.01 (101798 / 102813) Dev: 94.87 (7687 / 8103) Test: 94.91 (11657 / 12282)
 
+## 实验
+
+| __Path__| __Notes__| __Dev(gold predicate sense)__| __Test(gold)__|  __Dev(mate-tools sense)__| __Test__|
+|---------|----------|------------------------------|---------------|---------------------------|---------|
+|n126 ~/Chinese-SRL/exp-baseline-for-CoNLL09| CoNLL-2009 Baseline|85.82%  |85.80%  |84.27%  |84.25%  |
+
 # Chinese SRL Papers
 ### A Progressive Learning Approach to Chinese SRL Using Heterogeneous Data
 本论文是 ACL 2017的长文。
