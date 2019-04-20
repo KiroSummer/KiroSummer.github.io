@@ -152,6 +152,8 @@ __结论__:
 CoNLL-2008提出这个任务。一般分为 谓词识别和分歧，论元的识别和分类。
 CoNLL-2008只是一个英文的任务，而CoNLL-2009是一个多语言的任务。并且在 CoNLL-2009中，谓词已经被标出。
 
+## 抽取 BERT
+__神经病吧__，为什么抽取出来的 feature里面会有一个 “0.26^P122”，这么奇怪的东西，其他人都是 float，就这么一个是怪胎，害得我找了好久，现在就改成 5好了。。
 ## predicate identification and disambiguation
 使用 mate-tools（引用）进行处理：这个工具可以百分百识别 predicate。predicate sense。处理之后的 Accuracy：
 Train: 99.01 (101798 / 102813) Dev: 94.87 (7687 / 8103) Test: 94.91 (11657 / 12282)
@@ -161,6 +163,9 @@ Train: 99.01 (101798 / 102813) Dev: 94.87 (7687 / 8103) Test: 94.91 (11657 / 122
 | __Path__| __Notes__| __Dev(gold predicate sense)__| __Test(gold)__|  __Dev(mate-tools sense)__| __Test__|
 |---------|----------|------------------------------|---------------|---------------------------|---------|
 |n126 ~/Chinese-SRL/exp-baseline-for-CoNLL09| CoNLL-2009 Baseline|85.82%  |85.80%  |84.27%  |84.25%  |
+|n126 ~/Chinese-SRL/exp-baseline-for-CoNLL09-w-dep-softmax-weighted-sum| Baseline+Softmax weighted sum dep BiLSTM|  |  |  |  |
+|n126 ~/Chinese-SRL/exp-baseline-for-CoNLL09-w-bert| Baseline + BERT features |  |  |  |  |
+|n126 ~/Chinese-SRL/exp-baseline-for-CoNLL09-w-dep-softmax-weighted-sum-w-bert| Baseline + BERT features + softmax weighted sum dep BiLSTM |  |  |  |  |
 
 # Chinese SRL Papers
 ### A Progressive Learning Approach to Chinese SRL Using Heterogeneous Data
