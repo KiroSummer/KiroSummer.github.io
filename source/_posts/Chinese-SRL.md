@@ -136,7 +136,7 @@ __待进行的实验__
 |<font color="blue">n126 ~/Chinese-SRL/exp-baseline-sum-lstm-for-span-re-run3</font>  |Baseline    |82.13%    |80.60%   |
 |<font color="blue">n126 ~/Chinese-SRL/exp-baseline-mean-with-bert</font>|Baseline+BERT |86.27%  |86.61%   |
 |<font color="blue">n126 ~/Chinese-SRL/exp-baseline-mean-with-bert-average</font>|Baseline+BERT(avg) |86.36%  |86.89%   |
-|  |Baseline+BERT fine tuning|  |  |  |  |
+|  |Baseline+BERT fine tuning|  |  |
 |n126 ~/Chinese-SRL/exp-baseline-mean-with-bert-average-re-run | Baseline+BERT(avg) re-run|86.01% |86.37%  |
 |<font color="blue">n126 ~/Chinese-SRL/exp-baseline-MTL-dep-with-bert</font>|Baseline+BERT+dep hard sharing|86.77%  |87.03%  |
 |n126 ~/Chinese-SRL/exp-baseline-MTL-dep-with-bert-with-dep-bert|hard sharing方式，同时在 SRL和 Dep部分加入对应的 BERT特征|86.51% |87.56% |
@@ -164,7 +164,7 @@ Train: 99.01 (101798 / 102813) Dev: 94.87 (7687 / 8103) Test: 94.91 (11657 / 122
 | __Path__| __Notes__| __Dev(gold predicate sense)__| __Test(gold)__|  __Dev(mate-tools sense)__| __Test__|
 |---------|----------|------------------------------|---------------|---------------------------|---------|
 |n126 ~/Chinese-SRL/exp-baseline-for-CoNLL09| CoNLL-2009 Baseline|85.82%  |85.80%  |84.27%  |84.25%  |
-|n126 ~/Chinese-SRL/exp-baseline-for-CoNLL09-w-dep-softmax-weighted-sum| Baseline+Softmax weighted sum dep BiLSTM|  |  |  |  |
+|n126 ~/Chinese-SRL/exp-baseline-for-CoNLL09-w-dep-softmax-weighted-sum| Baseline+Softmax weighted sum dep BiLSTM|87.13%  |86.68%  |85.59%  |85.13% |
 |n126 ~/Chinese-SRL/exp-baseline-for-CoNLL09-w-bert| Baseline + BERT features |  |  |  |  |
 |n126 ~/Chinese-SRL/exp-baseline-for-CoNLL09-w-dep-softmax-weighted-sum-w-bert| Baseline + BERT features + softmax weighted sum dep BiLSTM |  |  |  |  |
 
