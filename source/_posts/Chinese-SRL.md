@@ -118,7 +118,7 @@ __待进行的实验__
 |n126 ~/Chinese-SRL/exp-baseline-MTL-dep-soft-sharing-BiLSTM | dep BiLSTM soft sharing with SRL BiLSTM| 83.13% |82.24%| 
 |n126 ~/Chinese-SRL/exp-baseline-MTL-dep-private-lstm-weighted-sum-srl-biltm| dep BiLSTM weighted sum + SRL BiLSTM layer 3|82.85% | 82.43% |
 |n126 ~/Chinese-SRL/exp-baseline-MTL-dep-private-lstm-weighted-sum-srl-biltm-layer-2| dep BiLSTM weighted sum + SRL BiLSTM layer 2|83.42% | 83.52%|
-|<font color="blue">n126 ~/Chinese-SRL/exp-baseline-mean-with-TreeGRU</font>|Baseline + TreeGRU(SUDA-format) |  |  |
+|<font color="blue">n126 ~/Chinese-SRL/exp-baseline-mean-with-TreeGRU</font>|Baseline + TreeGRU(SUDA-format) |81.28%  |80.05%  |
 
 总结：
 1. dep ratio pruning似乎对于模型的性能没有什么重要的影响，猜测的解释是：因为已经包含了全部的 dep语料，而且 dep中 ratio比较低的比较少吧。
@@ -136,6 +136,7 @@ __待进行的实验__
 |<font color="blue">n126 ~/Chinese-SRL/exp-baseline-sum-lstm-for-span-re-run3</font>  |Baseline    |82.13%    |80.60%   |
 |<font color="blue">n126 ~/Chinese-SRL/exp-baseline-mean-with-bert</font>|Baseline+BERT |86.27%  |86.61%   |
 |<font color="blue">n126 ~/Chinese-SRL/exp-baseline-mean-with-bert-average</font>|Baseline+BERT(avg) |86.36%  |86.89%   |
+|  |Baseline+BERT fine tuning|  |  |  |  |
 |n126 ~/Chinese-SRL/exp-baseline-mean-with-bert-average-re-run | Baseline+BERT(avg) re-run|86.01% |86.37%  |
 |<font color="blue">n126 ~/Chinese-SRL/exp-baseline-MTL-dep-with-bert</font>|Baseline+BERT+dep hard sharing|86.77%  |87.03%  |
 |n126 ~/Chinese-SRL/exp-baseline-MTL-dep-with-bert-with-dep-bert|hard sharing方式，同时在 SRL和 Dep部分加入对应的 BERT特征|86.51% |87.56% |
