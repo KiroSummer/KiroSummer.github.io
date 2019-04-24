@@ -114,6 +114,7 @@ __待进行的实验__
 |n126 ~/Chinese-SRL/exp-baseline-MTL-dep-share-2-3-mlp-rep-w-dropout-concat| 同上，concat| 83.22% | 83.45%|
 |<font color="blue">n126 ~/Chinese-SRL/exp-baseline-MTL-dep-private-lstm-weighted-sum-as-input</font>| dep BiLSTM weighted sum as SRL input| 83.39% | __83.91%__|
 |<font color="gray">n126 ~/Chinese-SRL/exp-baseline-MTL-dep-private-lstm-weighted-sum-as-input-avg</font>| dep BiLSTM average as SRL input| 83.53% | 83.63%|
+|<font color="gray">n126 ~/Chinese-SRL/exp-baseline-MTL-dep-private-lstm-weighted-sum-as-input-max-steps-180000</font>| dep BiLSTM weighted sum as SRL input| 84.16% | 83.72%|
 |n126 ~/Chinese-SRL/exp-baseline-MTL-dep-private-lstm-weighted-sum-as-input-avg| dep BiLSTM avg as SRL input|  |  |
 |n126 ~/Chinese-SRL/exp-baseline-MTL-dep-soft-sharing-BiLSTM | dep BiLSTM soft sharing with SRL BiLSTM| 83.13% |82.24%| 
 |n126 ~/Chinese-SRL/exp-baseline-MTL-dep-private-lstm-weighted-sum-srl-biltm| dep BiLSTM weighted sum + SRL BiLSTM layer 3|82.85% | 82.43% |
@@ -168,6 +169,8 @@ Train: 99.01 (101798 / 102813) Dev: 94.87 (7687 / 8103) Test: 94.91 (11657 / 122
 |n126 ~/Chinese-SRL/exp-baseline-for-CoNLL09-w-dep-softmax-weighted-sum| Baseline+Softmax weighted sum dep BiLSTM|87.13%  |86.68%  |85.59%  |85.13% |
 |n126 ~/Chinese-SRL/exp-baseline-for-CoNLL09-w-bert| Baseline + BERT features |89.91%  |90.00%  |88.36%  |88.45%  |
 |n126 ~/Chinese-SRL/exp-baseline-for-CoNLL09-w-dep-softmax-weighted-sum-w-bert| Baseline + BERT features + softmax weighted sum dep BiLSTM |90.07%  |90.02%  |88.52%  |88.47%  |
+|n126 ~/Chinese-SRL/exp-baseline-for-CoNLL09-w-dep-softmax-weighted-sum-w-bert-re-run|同上 |90.07%  |90.02%  |88.52%  |88.47%  |
+|n126 ~/Chinese-SRL/exp-baseline-for-CoNLL09-w-dep-softmax-weighted-sum-w-bert-max-steps-18w|同上, 18w steps |   |   |   |  |
 
 # Chinese SRL Papers
 ### A Progressive Learning Approach to Chinese SRL Using Heterogeneous Data
