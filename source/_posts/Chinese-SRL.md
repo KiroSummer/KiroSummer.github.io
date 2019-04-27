@@ -170,7 +170,9 @@ Train: 99.01 (101798 / 102813) Dev: 94.87 (7687 / 8103) Test: 94.91 (11657 / 122
 |n126 ~/Chinese-SRL/exp-baseline-for-CoNLL09-w-dep-softmax-weighted-sum-w-bert| Baseline + BERT features + softmax weighted sum dep BiLSTM |90.07%  |90.02%  |88.52%  |88.47%  |
 |n126 ~/Chinese-SRL/exp-baseline-for-CoNLL09-w-dep-softmax-weighted-sum-w-bert-re-run|同上 |90.07%  |90.02%  |88.52%  |88.47%  |
 |n126 ~/Chinese-SRL/exp-baseline-for-CoNLL09-w-dep-softmax-weighted-sum-w-bert-upgraded-batching-strategy|修改了 dep data batch的方式 |90.04%  |89.77%  |88.50%  |88.23%  |
-|n126 ~/Chinese-SRL/exp-baseline-for-CoNLL09-w-dep-softmax-weighted-sum-w-bert-max-steps-18w|同上, 18w steps |   |   |   |  |
+|n126 ~/Chinese-SRL/exp-baseline-for-CoNLL09-w-dep-softmax-weighted-sum-w-bert-max-steps-18w|同上, 18w steps |90.15%  |90.09%   |88.59%   |88.53%  |
+|n126 ~/Chinese-SRL/exp-baseline-for-CoNLL09-w-dep-softmax-weighted-sum-w-bert-later-dep| 5w次迭代之后，加入 dep features|  |  |  |  |
+|n126 ~/Chinese-SRL/exp-baseline-for-CoNLL09-w-dep-softmax-weighted-sum-w-bert-later-bert| 10w次迭代之后，加入 bert features|  |  |  |  |
 
 # Chinese SRL Papers
 ### A Progressive Learning Approach to Chinese SRL Using Heterogeneous Data
