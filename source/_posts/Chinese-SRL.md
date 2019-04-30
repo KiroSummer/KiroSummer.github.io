@@ -137,7 +137,7 @@ __待进行的实验__
 |<font color="blue">n126 ~/Chinese-SRL/exp-baseline-sum-lstm-for-span-re-run3</font>  |Baseline    |82.13%    |80.60%   |
 |<font color="blue">n126 ~/Chinese-SRL/exp-baseline-mean-with-bert</font>|Baseline+BERT |86.27%  |86.61%   |
 |<font color="blue">n126 ~/Chinese-SRL/exp-baseline-mean-with-bert-average</font>|Baseline+BERT(avg) |86.36%  |86.89%   |
-|n126 ~/Chinese-SRL/exp-baseline-mean-with-bert-fine-tuning|Baseline+BERT fine tuning|  |  |
+|n126 ~/Chinese-SRL/exp-baseline-mean-with-bert-fine-tuning|Baseline+BERT fine tuning|84.00%  |?  |
 |n126 ~/Chinese-SRL/exp-baseline-mean-with-bert-average-re-run | Baseline+BERT(avg) re-run|86.01% |86.37%  |
 |<font color="blue">n126 ~/Chinese-SRL/exp-baseline-MTL-dep-with-bert</font>|Baseline+BERT+dep hard sharing|86.77%  |87.03%  |
 |n126 ~/Chinese-SRL/exp-baseline-MTL-dep-with-bert-with-dep-bert|hard sharing方式，同时在 SRL和 Dep部分加入对应的 BERT特征|86.51% |87.56% |
@@ -149,6 +149,7 @@ __待进行的实验__
 __结论__:
 1. BERT的 average方式和 softmax weighted sum方式效果基本一致，没有很大的差别。
 2. 利用BERT之后，再加入句法，句法依旧展示了它的不可替代的部分性能。
+3. 在初步调试 BERT fine tuning之后，发现性能并没有得到很高的提升，而且可能是因为模型保存的问题？测试的时候和训练阶段得到的评价指标是不一样的（待解决）？
 
 # Dependency-based SRL (semantic dependency parsing)
 CoNLL-2008提出这个任务。一般分为 谓词识别和分歧，论元的识别和分类。
