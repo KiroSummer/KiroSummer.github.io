@@ -174,7 +174,7 @@ Train: 99.01 (101798 / 102813) Dev: 94.87 (7687 / 8103) Test: 94.91 (11657 / 122
 |n126 ~/Chinese-SRL/exp-baseline-for-CoNLL09-w-dep-softmax-weighted-sum-w-bert-max-steps-18w|同上, 18w steps |90.15%  |90.09%   |88.59%   |88.53%  |
 |n126 ~/Chinese-SRL/exp-baseline-for-CoNLL09-w-dep-softmax-weighted-sum-w-bert-later-dep| 5w次迭代之后，加入 dep features|90.14% |90.09% |88.59% |88.54% |
 |n126 ~/Chinese-SRL/exp-baseline-for-CoNLL09-w-dep-softmax-weighted-sum-w-bert-later-bert| 10w次迭代之后，加入 bert features|86.99%  |86.75%  |85.44%  |85.20%  |
-|n126 ~/Chinese-SRL/exp-baseline-for-CoNLL09-w-dep-softmax-weighted-sum-w-bert-later-bert-not-update-dep |10w次迭代之后，不在 train dep batch data |  |  |  |  |
+|n126 ~/Chinese-SRL/exp-baseline-for-CoNLL09-w-dep-softmax-weighted-sum-w-bert-later-bert-not-update-dep |10w次迭代之后，不在 train dep batch data |86.99% |86.74%  |85.44%  |85.18%  |
 
 # Chinese SRL Papers
 ### A Progressive Learning Approach to Chinese SRL Using Heterogeneous Data
