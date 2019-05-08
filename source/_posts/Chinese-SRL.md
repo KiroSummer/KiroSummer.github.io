@@ -121,6 +121,17 @@ __待进行的实验__
 |<font color="blue">n126 ~/Chinese-SRL/exp-baseline-mean-with-TreeGRU</font>|Baseline + TreeGRU(SUDA-format) |81.28%  |80.05%  |
 |<font color="blue">n16 ~/Chinese-SRL/exp-baseline-mean-with-biaffine-features</font>  |Baseline+Biaffine (SUDA-format) features|83.30%  |82.65%  |
 
+### 句法数据规模对所提框架的影响：
+Notes:*这里的句法数据指的是先随机过了，然后再选取前n句*
+
+| __Path__| __Notes__| __Dev__| __Test__|
+|---------|----------|--------|---------|
+|n126 ~/Chinese-SRL/exp-baseline-MTL-dep-private-lstm-weighted-sum-as-input-dep-size-10000| 10000个句法句子|82.59 |82.55|
+|n126 ~/Chinese-SRL/exp-baseline-MTL-dep-private-lstm-weighted-sum-as-input-dep-size-20000| 20000	   |83.01 |83.23|
+|n126 ~/Chinese-SRL/exp-baseline-MTL-dep-private-lstm-weighted-sum-as-input-dep-size-30000| 30000 	   |83.22 |83.37|
+|n126 ~/Chinese-SRL/exp-baseline-MTL-dep-private-lstm-weighted-sum-as-input-dep-size-40000| 40000	   |82.92 |82.92|
+|n126 ~/Chinese-SRL/exp-baseline-MTL-dep-private-lstm-weighted-sum-as-input-dep-size-50000| 50000	   |83.70 |83.50|
+
 总结：
 1. dep ratio pruning似乎对于模型的性能没有什么重要的影响，猜测的解释是：因为已经包含了全部的 dep语料，而且 dep中 ratio比较低的比较少吧。
 2. share lstm前两层和私有最后一层是一个可行的途径，性能几乎没有差别。
@@ -165,9 +176,9 @@ Train: 99.01 (101798 / 102813) Dev: 94.87 (7687 / 8103) Test: 94.91 (11657 / 122
 
 | __Path__| __Notes__| __Dev(gold predicate sense)__| __Test(gold)__|  __Dev(mate-tools sense)__| __Test__|
 |---------|----------|------------------------------|---------------|---------------------------|---------|
-|n126 ~/Chinese-SRL/exp-baseline-for-CoNLL09| CoNLL-2009 Baseline|85.82%  |85.80%  |84.27%  |84.25%  |
-|n126 ~/Chinese-SRL/exp-baseline-for-CoNLL09-w-dep-softmax-weighted-sum| Baseline+Softmax weighted sum dep BiLSTM|87.13%  |86.68%  |85.59%  |85.13% |
-|n126 ~/Chinese-SRL/exp-baseline-for-CoNLL09-w-bert| Baseline + BERT features |89.91%  |90.00%  |88.36%  |88.45%  |
+|<font color="blue">n126 ~/Chinese-SRL/exp-baseline-for-CoNLL09 </font>| CoNLL-2009 Baseline|85.82%  |85.80%  |84.27%  |84.25%  |
+|<font color="blue">n126 ~/Chinese-SRL/exp-baseline-for-CoNLL09-w-dep-softmax-weighted-sum </font>| Baseline+Softmax weighted sum dep BiLSTM|87.13%  |86.68%  |85.59%  |85.13% |
+|<font color="blue">n126 ~/Chinese-SRL/exp-baseline-for-CoNLL09-w-bert </font>| Baseline + BERT features |89.91%  |90.00%  |88.36%  |88.45%  |
 |n126 ~/Chinese-SRL/exp-baseline-for-CoNLL09-w-dep-softmax-weighted-sum-w-bert| Baseline + BERT features + softmax weighted sum dep BiLSTM |90.07%  |90.02%  |88.52%  |88.47%  |
 |n126 ~/Chinese-SRL/exp-baseline-for-CoNLL09-w-dep-softmax-weighted-sum-w-bert-re-run|同上 |90.07%  |90.02%  |88.52%  |88.47%  |
 |n126 ~/Chinese-SRL/exp-baseline-for-CoNLL09-w-dep-softmax-weighted-sum-w-bert-upgraded-batching-strategy|修改了 dep data batch的方式 |90.04%  |89.77%  |88.50%  |88.23%  |
@@ -175,6 +186,7 @@ Train: 99.01 (101798 / 102813) Dev: 94.87 (7687 / 8103) Test: 94.91 (11657 / 122
 |n126 ~/Chinese-SRL/exp-baseline-for-CoNLL09-w-dep-softmax-weighted-sum-w-bert-later-dep| 5w次迭代之后，加入 dep features|90.14% |90.09% |88.59% |88.54% |
 |n126 ~/Chinese-SRL/exp-baseline-for-CoNLL09-w-dep-softmax-weighted-sum-w-bert-later-bert| 10w次迭代之后，加入 bert features|86.99%  |86.75%  |85.44%  |85.20%  |
 |n126 ~/Chinese-SRL/exp-baseline-for-CoNLL09-w-dep-softmax-weighted-sum-w-bert-later-bert-not-update-dep |10w次迭代之后，不在 train dep batch data |86.99% |86.74%  |85.44%  |85.18%  |
+|n126 exp-baseline-for-CoNLL09-w-dep-softmax-weighted-sum-w-bert-max-steps-18w-dep-all-with-cdt| 句法数据包含了 CDT-suda，并且跑了 18w steps|90.29% |90.18%  |88.74%|88.63%|
 
 # Chinese SRL Papers
 ### A Progressive Learning Approach to Chinese SRL Using Heterogeneous Data
