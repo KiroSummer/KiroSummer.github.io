@@ -131,6 +131,7 @@ Notes:*这里的句法数据指的是先随机过了，然后再选取前n句*
 |n126 ~/Chinese-SRL/exp-baseline-MTL-dep-private-lstm-weighted-sum-as-input-dep-size-30000| 30000 	   |83.22 |83.37|
 |n126 ~/Chinese-SRL/exp-baseline-MTL-dep-private-lstm-weighted-sum-as-input-dep-size-40000| 40000	   |82.92 |82.92|
 |n126 ~/Chinese-SRL/exp-baseline-MTL-dep-private-lstm-weighted-sum-as-input-dep-size-50000| 50000	   |83.70 |83.50|
+|n126 ~/Chinese-SRL/exp-baseline-MTL-dep-private-lstm-weighted-sum-as-input-dep-size-60000| 60000	   |83.79 |83.67|
 
 总结：
 1. dep ratio pruning似乎对于模型的性能没有什么重要的影响，猜测的解释是：因为已经包含了全部的 dep语料，而且 dep中 ratio比较低的比较少吧。
@@ -161,6 +162,13 @@ __结论__:
 1. BERT的 average方式和 softmax weighted sum方式效果基本一致，没有很大的差别。
 2. 利用BERT之后，再加入句法，句法依旧展示了它的不可替代的部分性能。
 3. 在初步调试 BERT fine tuning之后，发现性能并没有得到很高的提升，而且可能是因为模型保存的问题？测试的时候和训练阶段得到的评价指标是不一样的（待解决）？
+
+### end-2-end results on CPB1.0
+
+| __Path__| __Notes__| __Dev__| __Test__|
+|---------|----------|--------|---------|
+|n126: ~/Chinese-SRL/exp-baseline-mean-e2e-cpb	|end-to-end baseline on CPB1.0	|80.37%	|79.29%	|
+
 
 # Dependency-based SRL (semantic dependency parsing)
 CoNLL-2008提出这个任务。一般分为 谓词识别和分歧，论元的识别和分类。
