@@ -130,6 +130,7 @@ Notes:*这里的句法数据指的是先随机过了，然后再选取前n句*
 |n126 ~/Chinese-SRL/exp-baseline-MTL-dep-private-lstm-weighted-sum-as-input-dep-size-20000| 20000	   |83.01 |83.23|
 |n126 ~/Chinese-SRL/exp-baseline-MTL-dep-private-lstm-weighted-sum-as-input-dep-size-30000| 30000 	   |83.22 |83.37|
 |n126 ~/Chinese-SRL/exp-baseline-MTL-dep-private-lstm-weighted-sum-as-input-dep-size-40000| 40000	   |82.92 |82.92|
+|n126 ~/Chinese-SRL/exp-baseline-MTL-dep-private-lstm-weighted-sum-as-input-dep-size-40000-re-run-2| 40000	   |83.17 |83.65|
 |n126 ~/Chinese-SRL/exp-baseline-MTL-dep-private-lstm-weighted-sum-as-input-dep-size-50000| 50000	   |83.70 |83.50|
 |n126 ~/Chinese-SRL/exp-baseline-MTL-dep-private-lstm-weighted-sum-as-input-dep-size-60000| 60000	   |83.79 |83.67|
 
@@ -168,6 +169,8 @@ __结论__:
 | __Path__| __Notes__| __Dev__| __Test__|
 |---------|----------|--------|---------|
 |n126: ~/Chinese-SRL/exp-baseline-mean-e2e-cpb	|end-to-end baseline on CPB1.0	|80.37%	|79.29%	|
+|n126: ~/Chinese-SRL/exp-baseline-mean-w-dep-sws-e2e| baseline + dep | 82.39% | 81.73% |
+|n126: ~/Chinese-SRL/exp-baseline-mean-e2e-with-bert| baseline + BERT |85.30% |85.26%|
 
 
 # Dependency-based SRL (semantic dependency parsing)
