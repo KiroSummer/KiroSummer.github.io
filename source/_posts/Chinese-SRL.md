@@ -13,7 +13,34 @@ This post is for the work of Chinese Semantic Role Labeling. (2019-3-9)
 2. 和 SRL数据不重合的句法数据能够带来的效益是多少？如果融入了 BERT之后，这些句法数据是否还能够体现出作用？
 3. 如何利用这些句法数据？有什么比较高效的方式？利用句法是利用 Dependency还是 Constituent。
 
+# 显著性检验:
+## Syntax-aware methods
+[显著性检验 baseline vs baseline+fir dep](/documents/chinese_srl/log.cpb1.0.test.baseline.vs.baseline+FIR.txt)
+[显著性检验 baseline vs baseline+hps dep](/documents/chinese_srl/cpb1.0.test.baseline.vs.baseline+hps.txt)
+[显著性检验 baseline vs baseline+iir dep](/documents/chinese_srl/cpb1.0.test.baseline.vs.baseline+iir.txt)
+[显著性检验 baseline+hps vs baseline+iir dep](/documents/chinese_srl/log.cpb1.0.test.baseline+HPS.vs.baseline+IIR.txt)
+## Comparison on CPB1.0 test
+### pre-defined settings
+[显著性检验 baseline vs baseline+hps dep](/documents/chinese_srl/cpb1.0.test.baseline.vs.baseline+hps.txt)
+[显著性检验 baseline vs baseline+iir dep](/documents/chinese_srl/cpb1.0.test.baseline.vs.baseline+iir.txt)
+[显著性检验 baseline+hps vs baseline+iir dep](/documents/chinese_srl/log.cpb1.0.test.baseline+HPS.vs.baseline+IIR.txt)
+[显著性检验 baseline vs baseline+bert dep](/documents/chinese_srl/cpb1.0.test.baseline.vs.baseline+bert.txt)
+[显著性检验 baseline vs baseline+bert+iir dep](/documents/chinese_srl/cpb1.0.test.baseline.vs.baseline+bert+hps.cmp.txt)
+[显著性检验 baseline+bert vs baseline+bert+hps dep](/documents/chinese_srl/cpb.1.0.test.baseline+bert.vs.baseline+bert+hps-true.cmp.txt)
+[显著性检验 baseline+bert vs baseline+bert+iir dep](/documents/chinese_srl/cpb.1.0.test.baseline+bert.vs.baseline+bert+hps.cmp.txt)
+[显著性检验 baseline+bert+hps vs baseline+bert+iir dep](/documents/chinese_srl/cpb.1.0.test.baseline+bert+hps.VS.baseline+bert+iir.cmp.txt) (高)
+### end-to-end settings
+[显著性检验 baseline vs baseline+iir dep](/documents/chinese_srl/test.cpb1.0.e2e.baseline.VS.baseline+iir.cmp.txt)
+[显著性检验 baseline+bert vs baseline+bert+iir dep](/documents/chinese_srl/test.cpb.1.0.e2e.baseline+bert.VS.baseline+bert+iir.cmp.txt) (高)
+
+## Comparison on CoNLL-2009 Chinese test
+[显著性检验 baseline vs baseline+iir dep](/documents/chinese_srl/test.conll09.baseline.VS.baseline+iir.cmp.txt)
+[显著性检验 baseline+bert vs baseline+bert+iir dep](/documents/chinese_srl/test.conll09.baseline+bert.VS.baseline+bert+iir.cmp.txt) (高)
+
+
+
 # Chinese SRL Experiments
+
 ## 数据准备：
 ### LSGN 英文的数据
 SRL数据：CoNLL-2005, CoNLL-2012
