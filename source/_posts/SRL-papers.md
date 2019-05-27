@@ -67,3 +67,6 @@ tags: [SRL]
 
 ## Graph Convolutional Networks for Text Classification
 本文是 AAAI2019的一篇工作，本文利用 GCN来处理文本分类，本文的主要贡献在于利用 GCN，将数据集的所有的 word以及 document是作为 node，然后通过建立邻接矩阵A，利用了两层 GCN来达到分类的目的。
+
+## Syntax-aware Neural Semantic Role Labeling with Supertags
+本文是 NAACL-2019的一篇短文。本文利用了前人提出的 Supertags，作为一种 external embeddings输入到 SRL模型中。本文的贡献在于提出了一个 TAG supertags，略微区别于前人提出的一些 supertags，略有提升效果。在 ELMo的加持下，略有提升（没有 significant test）。
