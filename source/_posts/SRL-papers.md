@@ -70,3 +70,6 @@ tags: [SRL]
 
 ## Syntax-aware Neural Semantic Role Labeling with Supertags
 本文是 NAACL-2019的一篇短文。本文利用了前人提出的 Supertags，作为一种 external embeddings输入到 SRL模型中。本文的贡献在于提出了一个 TAG supertags，略微区别于前人提出的一些 supertags，略有提升效果。在 ELMo的加持下，略有提升（没有 significant test）。
+
+## Towards Semi-Supervised Learning for Deep Semantic Role Labeling
+文本是 EMNLP-2018年的一篇短文。本文提出，在训练基于神经网络的模型的时候加入句法结构能够获得鲁棒的性能，特别是对于低资源的情况。本文的贡献在于：1）在训练模型的时候将句法树作为硬约束，2）半监督的模型。大部分前人的工作都是在 decoder部分引入 constraints，本文则在 training部分引入 constraints。
