@@ -159,6 +159,7 @@ Notes:*这里的句法数据指的是先随机过了，然后再选取前n句*
 |n126 ~/Chinese-SRL/exp-baseline-MTL-dep-private-lstm-weighted-sum-as-input-dep-size-40000| 40000	   |82.92 |82.92|
 |n126 ~/Chinese-SRL/exp-baseline-MTL-dep-private-lstm-weighted-sum-as-input-dep-size-40000-re-run-2| 40000	   |83.17 |83.65|
 |n126 ~/Chinese-SRL/exp-baseline-MTL-dep-private-lstm-weighted-sum-as-input-dep-size-40000-re-run-3| 40000	   |83.10 |83.44|
+|n126 ~/Chinese-SRL/exp-baseline-MTL-dep-private-lstm-weighted-sum-as-input-dep-size-40000-re-run-4| 40000	   |83.37 |83.68|
 |n126 ~/Chinese-SRL/exp-baseline-MTL-dep-private-lstm-weighted-sum-as-input-dep-size-50000| 50000	   |83.70 |83.50|
 |n126 ~/Chinese-SRL/exp-baseline-MTL-dep-private-lstm-weighted-sum-as-input-dep-size-60000| 60000	   |83.79 |83.67|
 
