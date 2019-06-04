@@ -1,11 +1,19 @@
 ---
 title: End-to-End-SRL
-date: 2019-01-30 18:00:25
+date: 2019-05-30 18:00:25
 password: suda_kiro
 tags: [SRL]
 ---
 # Introduction (2018-12-1)
 Begin the work on the end-to-end framework SRL.
+
+# add the self-attention into the lsgn
+
+| __Path__| __Notes__| __Devel__| __Test WSJ__| __Test Brown__|
+|---------|----------|----------|-------------|---------------|
+|~/lsgn-extension/exp-baseline-using-self-attention-encoder| lr 0.01 |21.9|  |  |
+|~/lsgn-extension/exp-baseline-using-self-attention-encoder-lr-0.001|  | 26.93|  |  |
+|~/lsgn-extension/exp-baseline-using-self-attention-encoder-lr-0.0001|  | 76.85|  |  |
 
 # Trials on lsgn-extension (begin from 2019-3-1)
 
