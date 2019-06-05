@@ -13,9 +13,9 @@ Begin the work on the end-to-end framework SRL.
 |---------|----------|----------|-------------|---------------|
 |~/lsgn-extension/exp-baseline-using-self-attention-encoder| lr 0.01 |21.9|  |  |
 |~/lsgn-extension/exp-baseline-using-self-attention-encoder-lr-0.001|  | 26.93|  |  |
-|~/lsgn-extension/exp-baseline-using-self-attention-encoder-lr-0.0008|  | |  |  |
-|~/lsgn-extension/exp-baseline-using-self-attention-encoder-lr-0.0005|  | |  |  |
-|~/lsgn-extension/exp-baseline-using-self-attention-encoder-lr-0.0002|  | |  |  |
+|~/lsgn-extension/exp-baseline-using-self-attention-encoder-lr-0.0008|  |70.39 |  |  |
+|~/lsgn-extension/exp-baseline-using-self-attention-encoder-lr-0.0005|  |75.94 |  |  |
+|~/lsgn-extension/exp-baseline-using-self-attention-encoder-lr-0.0002|  |__77.47__ |  |  |
 |~/lsgn-extension/exp-baseline-using-self-attention-encoder-lr-0.0001|  | 76.85|  |  |
 |~/lsgn-extension/exp-baseline-using-self-attention-encoder-lr-0.00001|  |61.38 |  |  |
 |~/lsgn-extension/exp-baseline-using-self-attention-encoder-lr-0.000001|  |16.54 |  |  |
