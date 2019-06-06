@@ -9,6 +9,25 @@ Begin the work on the end-to-end framework SRL.
 
 # add the self-attention into the lsgn
 
+## batch size调参
+因为设置了 max token=700，所以 batch size可能有点唬人。。
+
+| __Path__| __Notes__| __Devel__| __Test WSJ__| __Test Brown__|
+|---------|----------|----------|-------------|---------------|
+|~/lsgn-extension/exp-baseline-using-self-attention-encoder-lr-0.0002|20 1991 batches  |__77.47__ |  |  |
+|~/lsgn-extension/exp-baseline-self-attention-encoder-bs-32 |32 1391 |77.08  |  |  |
+|~/lsgn-extension/exp-baseline-self-attention-encoder-bs-40 |40 1386 |76.91  |  |  |
+|~/lsgn-extension/exp-baseline-self-attention-encoder-bs-50 |50 1386 |77.41  |  |  |
+
+## self-attention layers调参数
+| __Path__| __Notes__| __Devel__| __Test WSJ__| __Test Brown__|
+|---------|----------|----------|-------------|---------------|
+|~/lsgn-extension/exp-baseline-using-self-attention-encoder-lr-0.0002|4  |__77.47__ |  |  |
+|~/lsgn-extension/exp-baseline-self-attention-encoder-blocks-6| 6  |77.34  |  |  |
+|~/lsgn-extension/exp-baseline-self-attention-encoder-blocks-8| 8  |77.01  |  |  |
+|~/lsgn-extension/exp-baseline-self-attention-encoder-blocks-10| 10  |77.31  |  |  |
+
+## learning rate调参
 | __Path__| __Notes__| __Devel__| __Test WSJ__| __Test Brown__|
 |---------|----------|----------|-------------|---------------|
 |~/lsgn-extension/exp-baseline-using-self-attention-encoder| lr 0.01 |21.9|  |  |
