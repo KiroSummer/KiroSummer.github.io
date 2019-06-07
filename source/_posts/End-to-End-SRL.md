@@ -8,6 +8,13 @@ tags: [SRL]
 Begin the work on the end-to-end framework SRL.
 
 # add the self-attention into the lsgn
+## clip gradient 调参
+| __Path__| __Notes__| __Devel__| __Test WSJ__| __Test Brown__|
+|---------|----------|----------|-------------|---------------|
+|~/lsgn-extension/exp-baseline-using-self-attention-encoder-lr-0.0002|没有 clip gradient  |__77.47__ |  |  |
+|~/lsgn-extension/exp-baseline-w-self-attention-encoder-v2 | gradient clip = 1.0 |77.31   |  | |
+|~/lsgn-extension/exp-baseline-w-self-attention-encoder-v2-grad-clip-5.0 | gradient clip = 5.0 |76.91   |  | |
+|~/lsgn-extension/exp-baseline-w-self-attention-encoder-v2-grad-clip-10.0 | gradient clip = 10.0 |76.97   |  | |
 
 ## batch size调参
 因为设置了 max token=700，所以 batch size可能有点唬人。。
