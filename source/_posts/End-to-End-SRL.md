@@ -8,6 +8,15 @@ tags: [SRL]
 Begin the work on the end-to-end framework SRL.
 
 # add the self-attention into the lsgn
+## 用 position embedding代替 timing signal之后的 attention blocks调参
+
+| __Path__| __Notes__| __Devel__| __Test WSJ__| __Test Brown__|
+|---------|----------|----------|-------------|---------------|
+|~/lsgn-extension/exp-baseline-w-self-attention-encoder-v3|4  | 77.24| | |
+|~/lsgn-extension/exp-baseline-w-self-attention-encoder-v3-blocks-6| 6 |78.26|  |  |
+|~/lsgn-extension/exp-baseline-w-self-attention-encoder-v3-blocks-8|8 |78.20 |  |  |
+
+
 ## clip gradient 调参
 | __Path__| __Notes__| __Devel__| __Test WSJ__| __Test Brown__|
 |---------|----------|----------|-------------|---------------|
