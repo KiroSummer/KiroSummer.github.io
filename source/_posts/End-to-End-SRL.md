@@ -13,7 +13,7 @@ Begin the work on the end-to-end framework SRL.
 | __Path__| __Notes__| __Devel__| __Test WSJ__| __Test Brown__|
 |---------|----------|----------|-------------|---------------|
 |~/lsgn-extension/exp-baseline-w-self-attention-encoder-v3|4  | 77.24| | |
-|~/lsgn-extension/exp-baseline-w-self-attention-encoder-v3-blocks-6| 6 |78.26|  |  |
+|~/lsgn-extension/exp-baseline-w-self-attention-encoder-v3-blocks-6| 6 |__78.26__|  |  |
 |~/lsgn-extension/exp-baseline-w-self-attention-encoder-v3-blocks-8|8 |78.20 |  |  |
 
 
