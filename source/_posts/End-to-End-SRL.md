@@ -8,6 +8,15 @@ tags: [SRL]
 Begin the work on the end-to-end framework SRL.
 
 # add the self-attention into the lsgn
+## loss的尝试以及 learning rate的调整
+| __Path__| __Notes__| __Devel__| __Test WSJ__| __Test Brown__|
+|---------|----------|----------|-------------|---------------|
+|~/lsgn-extension/exp-baseline-w-self-attention-encoder-v3-blocks-6| 6 |__78.26__|  |  |
+|~/lsgn-extension/exp-baseline-w-self-attention-encoder-v3-adjust-lr| 调整 learning rate as he 2018|78.16 |  |  |
+|~/lsgn-extension/exp-baseline-w-self-attention-encoder-v3-loss-divide-sum| 调整 loss / pair num sum |78.22 | | |
+|~/lsgn-extension/exp-baseline-w-self-attention-encoder-v3-loss-divide-predicate-num| 调整 loss / predicate num| 77.70| | |
+
+
 ## 用 position embedding代替 timing signal之后的 attention blocks调参
 
 | __Path__| __Notes__| __Devel__| __Test WSJ__| __Test Brown__|
