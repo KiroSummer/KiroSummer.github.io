@@ -8,11 +8,27 @@ tags: [SRL]
 Begin the work on the end-to-end framework SRL.
 
 # add the self-attention into the lsgn
+## 尝试修改模型参数 512->2018
+| __Path__| __Notes__| __Devel__| __Test WSJ__| __Test Brown__|
+|---------|----------|----------|-------------|---------------|
+|~/lsgn-extension/exp-baseline-w-self-attention-encoder-v4| lr 0.0002|20.19 |  |  |
+|~/lsgn-extension/exp-baseline-w-self-attention-encoder-v4-lr-0.001| lr 0.001 |20.36 |  |  |
+|~/lsgn-extension/exp-baseline-w-self-attention-encoder-v4-lr-0.00001| lr 0.00001|__79.80__ | | |
+
+## 尝试利用 MLP output as the predicate and arguemnt representations
+
+| __Path__| __Notes__| __Devel__| __Test WSJ__| __Test Brown__|
+|---------|----------|----------|-------------|---------------|
+|~/lsgn-extension/exp-baseline-w-self-attention-encoder-v3-blocks-6| 6 |__78.26__|  |  |
+|~/lsgn-extension/exp-baseline-w-self-attention-encoder-v3-pre-arg-rep |MLP output -> srl scorer |77.31 |  |  |
+|~/lsgn-extension/exp-baseline-w-self-attention-encoder-v3-pre-arg-rep-v2| MLP output-> srl projection|50.70 |  |  |
+
 ## loss的尝试以及 learning rate的调整
 | __Path__| __Notes__| __Devel__| __Test WSJ__| __Test Brown__|
 |---------|----------|----------|-------------|---------------|
 |~/lsgn-extension/exp-baseline-w-self-attention-encoder-v3-blocks-6| 6 |__78.26__|  |  |
 |~/lsgn-extension/exp-baseline-w-self-attention-encoder-v3-adjust-lr| 调整 learning rate as he 2018|78.16 |  |  |
+|~/lsgn-extension/exp-baseline-w-self-attention-encoder-v3-adjust-lr-paper|调整 learning rate根据 paper| 76.81| | |
 |~/lsgn-extension/exp-baseline-w-self-attention-encoder-v3-loss-divide-sum| 调整 loss / pair num sum |78.22 | | |
 |~/lsgn-extension/exp-baseline-w-self-attention-encoder-v3-loss-divide-predicate-num| 调整 loss / predicate num| 77.70| | |
 
