@@ -13,7 +13,12 @@ Begin the work on the end-to-end framework SRL.
 |---------|----------|----------|-------------|---------------|
 |~/lsgn-extension/exp-baseline-w-self-attention-encoder-v4| lr 0.0002|20.19 |  |  |
 |~/lsgn-extension/exp-baseline-w-self-attention-encoder-v4-lr-0.001| lr 0.001 |20.36 |  |  |
-|~/lsgn-extension/exp-baseline-w-self-attention-encoder-v4-lr-0.00001| lr 0.00001|__79.80__ | | |
+|~/lsgn-extension/exp-baseline-w-self-attention-encoder-v4-lr-0.00001| lr 0.00001|79.80 | | |
+|~/lsgn-extension/exp-baseline-w-self-attention-encoder-v4-lr-0.00004| lr 0.00004|80.35 | | |
+|~/lsgn-extension/exp-baseline-w-self-attention-encoder-v4-lr-0.00005| lr 0.00005|80.25 | | |
+|~/lsgn-extension/exp-baseline-w-self-attention-encoder-v4-lr-0.00006| lr 0.00006|__80.45__ | | |
+|~/lsgn-extension/exp-baseline-w-self-attention-encoder-v4-lr-0.00007| lr 0.00007|80.27 | | |
+|~/lsgn-extension/exp-baseline-w-self-attention-encoder-v4-lr-0.00008| lr 0.00008|80.12 | | |
 
 ## 尝试利用 MLP output as the predicate and arguemnt representations
 
