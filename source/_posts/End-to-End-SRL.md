@@ -14,9 +14,14 @@ Begin the work on the end-to-end framework SRL.
 |~/lsgn-extension/exp-baseline-w-self-attention-encoder-v4| lr 0.0002|20.19 |  |  |
 |~/lsgn-extension/exp-baseline-w-self-attention-encoder-v4-lr-0.001| lr 0.001 |20.36 |  |  |
 |~/lsgn-extension/exp-baseline-w-self-attention-encoder-v4-lr-0.00001| lr 0.00001|79.80 | | |
+|~/lsgn-extension/exp-baseline-w-self-attention-encoder-v4-lr-0.000025| lr 0.000025|80.73 | | |
+|~/lsgn-extension/exp-baseline-w-self-attention-encoder-v4-lr-0.00003| lr 0.00003|__80.78__ | | |
+|~/lsgn-extension/exp-baseline-w-self-attention-encoder-v4-lr-0.000035| lr 0.000035|80.22 | | |
 |~/lsgn-extension/exp-baseline-w-self-attention-encoder-v4-lr-0.00004| lr 0.00004|80.35 | | |
+|~/lsgn-extension/exp-baseline-w-self-attention-encoder-v4-lr-0.000045| lr 0.000045|__81.10__ | | |
 |~/lsgn-extension/exp-baseline-w-self-attention-encoder-v4-lr-0.00005| lr 0.00005|80.25 | | |
-|~/lsgn-extension/exp-baseline-w-self-attention-encoder-v4-lr-0.00006| lr 0.00006|__80.45__ | | |
+|~/lsgn-extension/exp-baseline-w-self-attention-encoder-v4-lr-0.000055| lr 0.000055|80.57 | | |
+|~/lsgn-extension/exp-baseline-w-self-attention-encoder-v4-lr-0.00006| lr 0.00006|80.45 | | |
 |~/lsgn-extension/exp-baseline-w-self-attention-encoder-v4-lr-0.00007| lr 0.00007|80.27 | | |
 |~/lsgn-extension/exp-baseline-w-self-attention-encoder-v4-lr-0.00008| lr 0.00008|80.12 | | |
 
