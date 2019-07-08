@@ -79,7 +79,7 @@ theme: yilia
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: https://github.com/KiroSummer/KiroSummer.github.io
+  repo: git@kirosummer.github.com:KiroSummer/KiroSummer.github.io.git
 
 # Security  
 ##    
