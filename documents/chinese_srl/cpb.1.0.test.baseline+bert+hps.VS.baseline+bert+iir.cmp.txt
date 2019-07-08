@@ -1,0 +1,22 @@
+Doing random shuffle 10000 times.
+Completed 1000 iterations
+Completed 2000 iterations
+Completed 3000 iterations
+Completed 4000 iterations
+Completed 5000 iterations
+Completed 6000 iterations
+Completed 7000 iterations
+Completed 8000 iterations
+Completed 9000 iterations
+28867
+model1: recall=87.3793747185349, precision=86.4516735372548
+model2: recall=87.3496147850467, precision=86.8501354487801
+model2 recall - model1 recall = -0.0297599334881937
+model2 precision - model1 precision = 0.398461911525231
+number of random recall diferences equal to or greater than
+	original observed difference: 4296
+number of random precision diferences equal to or greater than
+	original observed difference: 38
+p-value for recall diff: 0.42965703429657
+p-value for precision diff: 0.0038996100389961
+
