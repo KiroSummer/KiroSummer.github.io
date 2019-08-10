@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="Kiro&#39;s Blog">
 <meta property="og:description" content="简介新开一篇博客，记录在阅读AMR论文的时候的一些收获。">
 <meta property="og:locale" content="zh-Han">
-<meta property="og:updated_time" content="2019-05-28T13:05:45.016Z">
+<meta property="og:updated_time" content="2019-08-09T08:23:32.428Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="SRL-papers">
 <meta name="twitter:description" content="简介新开一篇博客，记录在阅读AMR论文的时候的一些收获。">
@@ -240,6 +240,11 @@ var _hmt = _hmt || [];
 <h2 id="Graph-Convolutional-Networks-for-Text-Classification"><a href="#Graph-Convolutional-Networks-for-Text-Classification" class="headerlink" title="Graph Convolutional Networks for Text Classification"></a>Graph Convolutional Networks for Text Classification</h2><p>本文是 AAAI2019的一篇工作，本文利用 GCN来处理文本分类，本文的主要贡献在于利用 GCN，将数据集的所有的 word以及 document是作为 node，然后通过建立邻接矩阵A，利用了两层 GCN来达到分类的目的。</p>
 <h2 id="Syntax-aware-Neural-Semantic-Role-Labeling-with-Supertags"><a href="#Syntax-aware-Neural-Semantic-Role-Labeling-with-Supertags" class="headerlink" title="Syntax-aware Neural Semantic Role Labeling with Supertags"></a>Syntax-aware Neural Semantic Role Labeling with Supertags</h2><p>本文是 NAACL-2019的一篇短文。本文利用了前人提出的 Supertags，作为一种 external embeddings输入到 SRL模型中。本文的贡献在于提出了一个 TAG supertags，略微区别于前人提出的一些 supertags，略有提升效果。在 ELMo的加持下，略有提升（没有 significant test）。</p>
 <h2 id="Towards-Semi-Supervised-Learning-for-Deep-Semantic-Role-Labeling"><a href="#Towards-Semi-Supervised-Learning-for-Deep-Semantic-Role-Labeling" class="headerlink" title="Towards Semi-Supervised Learning for Deep Semantic Role Labeling"></a>Towards Semi-Supervised Learning for Deep Semantic Role Labeling</h2><p>文本是 EMNLP-2018年的一篇短文。本文提出，在训练基于神经网络的模型的时候加入句法结构能够获得鲁棒的性能，特别是对于低资源的情况。本文的贡献在于：1）在训练模型的时候将句法树作为硬约束，2）半监督的模型。大部分前人的工作都是在 decoder部分引入 constraints，本文则在 training部分引入 constraints。</p>
+<h2 id="Constituency-Parsing-with-a-Self-Attentive-Encoder"><a href="#Constituency-Parsing-with-a-Self-Attentive-Encoder" class="headerlink" title="Constituency Parsing with a Self-Attentive Encoder"></a>Constituency Parsing with a Self-Attentive Encoder</h2><p>插播一个 短语结构树的 论文，这个论文利用了 self-attention as the encoder，本文主要记录主要的 self-attention部分的见解</p>
+<ol>
+<li>hamming loss </li>
+<li>only + 0.45% compared with the BiLSTM encoder</li>
+</ol>
 
       
 
@@ -514,15 +519,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">neural-network</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">neural network</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">mathjax</a>
+                <a href="javascript:void(0)" class="js-tag color5">neural-network</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -542,11 +543,15 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">flush</a>
+                <a href="javascript:void(0)" class="js-tag color3">mathjax</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">c</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">flush</a>
               </li>
              
               <li class="article-tag-list-item">
