@@ -6,15 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2017/5 | Kiro&#39;s Blog</title>
+  <title>SRL-papers | Kiro&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Kiro&#39;s Blog">
-<meta property="og:url" content="http://yoursite.com/archives/2017/05/index.html">
+  <meta name="description" content="简介新开一篇博客，记录在阅读AMR论文的时候的一些收获。">
+<meta name="keywords" content="SRL">
+<meta property="og:type" content="article">
+<meta property="og:title" content="SRL-papers">
+<meta property="og:url" content="http://yoursite.com/2019/11/19/SRL-papers/index.html">
 <meta property="og:site_name" content="Kiro&#39;s Blog">
+<meta property="og:description" content="简介新开一篇博客，记录在阅读AMR论文的时候的一些收获。">
 <meta property="og:locale" content="zh-Han">
+<meta property="og:updated_time" content="2019-11-18T13:08:34.595Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Kiro&#39;s Blog">
+<meta name="twitter:title" content="SRL-papers">
+<meta name="twitter:description" content="简介新开一篇博客，记录在阅读AMR论文的时候的一些收获。">
   
     <link rel="alternative" href="/atom.xml" title="Kiro&#39;s Blog" type="application/atom+xml">
   
@@ -179,98 +184,208 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-SRL-papers" class="article article-type-post " itemscope="" itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/05/12/SemanticKnowledgeResearch/" class="archive-article-date">
-  	<time datetime="2017-05-12T04:09:38.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-12</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/05/12/SemanticKnowledgeResearch/">SemanticKnowledgeResearch</a>
+    <h1 class="article-title" itemprop="name">
+      SRL-papers
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2019/11/19/SRL-papers/" class="archive-article-date">
+  	<time datetime="2019-11-19T11:00:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-19</time>
+</a>
+        
+      </header>
+    
+<!-- 目录内容 -->
+		
+<!-- 目录内容结束 -->
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>新开一篇博客，记录在阅读AMR论文的时候的一些收获。<br><a id="more"></a></p>
+<h2 id="Syntax-aware-Multilingual-Semantic-Role-Labeling"><a href="#Syntax-aware-Multilingual-Semantic-Role-Labeling" class="headerlink" title="Syntax-aware Multilingual Semantic Role Labeling"></a>Syntax-aware Multilingual Semantic Role Labeling</h2><p>本片论文做的是多语言的 SRL，语料来自于 (CoNLL-2009)。本文的基础模型是 BiLSTM+Biaffine Scorer，利用了官方提供的句法，在此基础上提出了一种新的 argument pruning方式，主要思想类似于 TPF，也是给每个位置抽取一个 tuple，然后根据 tuple的频率进行修剪，取得了 SOTA的结果。</p>
+<h2 id="A-Progressive-Learning-Approach-to-Chinese-SRL-Using-Heterogeneous-Data"><a href="#A-Progressive-Learning-Approach-to-Chinese-SRL-Using-Heterogeneous-Data" class="headerlink" title="A Progressive Learning Approach to Chinese SRL Using Heterogeneous Data"></a>A Progressive Learning Approach to Chinese SRL Using Heterogeneous Data</h2><p>该篇论文主要利用 PNN+Gated Recurrent Adapter构建了一个可以利用异构数据的 SRL分析器。另外，还发布了一个数据 CSB。但是，和我的目标（尝试了解 SRL）并不一致。<br>本文几个重点：</p>
+<ol>
+<li>CSB的构建与其他 SRL语料的区别</li>
+<li>PNN + Gated Recurrent Adapter</li>
+</ol>
+<h2 id="Deep-Semantic-Role-Labeling-What-Works-and-What’t-Next"><a href="#Deep-Semantic-Role-Labeling-What-Works-and-What’t-Next" class="headerlink" title="Deep Semantic Role Labeling: What Works and What’t Next"></a>Deep Semantic Role Labeling: What Works and What’t Next</h2><p>本论文使用了一个 deep <strong>highway</strong> BiLSTM的架构来处理 SRL （highway之前没有见过），并且利用了这几年的一些优秀的做法来处理初始化和正则化。本文的几个重点：</p>
+<ol>
+<li>新提出了一个深层神经网络来处理 SRL</li>
+<li>详细分析了结构化的一致性和长距离的依赖问题</li>
+<li>详述了句法在 SRL上的应用</li>
+</ol>
+<p>本文提到的几个对我目前工作有用的几个点：</p>
+<ol>
+<li>初始化十分重要：正交初始化？（这个点在论文中表现得很重要）</li>
+<li>句法的信息十分重要+Biaffine</li>
+<li>有约束的Decoding？</li>
+<li>gated highway connections?</li>
+<li>BIO VS BIESO?</li>
+<li>Dropout: 0.1?</li>
+</ol>
+<h2 id="Linguisticaly-Informed-Self-Attention-for-Semantic-Role-Labeling"><a href="#Linguisticaly-Informed-Self-Attention-for-Semantic-Role-Labeling" class="headerlink" title="Linguisticaly-Informed Self-Attention for Semantic Role Labeling"></a>Linguisticaly-Informed Self-Attention for Semantic Role Labeling</h2><p>本文利用 self-attention做了一个 multi-task learning：词性、句法、谓词预测以及语义角色标注。旨在利用语言学的信息来进行端到端的语义角色标注。<br>模型的优化目标是：最大化各个子任务的 likelihood的 sum<br>本篇论文相对比与 He的工作，在使用 predicted predicates的情况下，效果有提高。</p>
+<h2 id="Jointly-Predicting-Predicates-and-Arguments-in-Neural-Semantic-Role-Labeling"><a href="#Jointly-Predicting-Predicates-and-Arguments-in-Neural-Semantic-Role-Labeling" class="headerlink" title="Jointly Predicting Predicates and Arguments in Neural Semantic Role Labeling"></a>Jointly Predicting Predicates and Arguments in Neural Semantic Role Labeling</h2><p>最近的一些基于 BIO-tagging的神经网络模型，都是假设给定了 gold predicate进行的 argument的预测，而且还不能够利用 span-level的特征。<br>本篇论文提出了一个 end-to-end的模型用来同时预测 predicates和 arguments，实验结果表明，本篇论文达到了目前不使用 gold predicate的最好的结果。<br>纵观整个论文，论文的模型架构来自于指代消除这个任务。值得注意的是，这个指代消除的工作同样是 He的工作。</p>
+<h2 id="Syntax-for-Semantic-Role-Labeling-To-Be-Or-Not-to-Be"><a href="#Syntax-for-Semantic-Role-Labeling-To-Be-Or-Not-to-Be" class="headerlink" title="Syntax for Semantic Role Labeling, To Be, Or Not to Be"></a>Syntax for Semantic Role Labeling, To Be, Or Not to Be</h2><p>这篇论文提出了一个使用扩展的 k-order argument pruning 加强 argument labeling的模型，并且取得了 state-of-the-art的结果。<br>本文的 SRL模型很普通，唯一比较特殊的就是 MLP的层数多了一点。<br>而且，本文利用了一个 argument pruning的策略来有效的利用句法信息，但是比较不好是，本文并没有明确指出该方法是用在了模型的哪一个地方，直接引用了以前的论文，让读者感觉知其所以然，不知其所以然。<br>这篇文章的模型唯一用到句法信息的地方就是在输入层里面加入了 dependency label的信息。<br>这篇文章的 argument pruning从论文里面看是在 preprocessing里面进行应用的，难道是在 dependency label上表现出来的？不是在 Decoder部分进行 constrained decoding？</p>
+<h2 id="Encoding-Sentences-with-Graph-Convolutional-Networks-for-Semantic-Role-Labeling"><a href="#Encoding-Sentences-with-Graph-Convolutional-Networks-for-Semantic-Role-Labeling" class="headerlink" title="Encoding Sentences with Graph Convolutional Networks for Semantic Role Labeling"></a>Encoding Sentences with Graph Convolutional Networks for Semantic Role Labeling</h2><p>本文提出了 graph convolutional networks (GCN)，用在基于图的神经网络。<br>本文将 GCN和 LSTM进行了 stack操作，然后得到了 state-of-the-art的结果。总的来说，对于一个图中的每一个节点来说，GCN用来 encode这个节点相关联的一些节点的信息。(本文的贡献有点好玩)</p>
+<h2 id="A-Full-End-to-End-Semantic-Role-Labeler-Syntax-agnostic-Over-Syntax-aware"><a href="#A-Full-End-to-End-Semantic-Role-Labeler-Syntax-agnostic-Over-Syntax-aware" class="headerlink" title="A Full End-to-End Semantic Role Labeler, Syntax-agnostic Over Syntax-aware?"></a>A Full End-to-End Semantic Role Labeler, Syntax-agnostic Over Syntax-aware?</h2><p>本文提出了一个端到端的统一处理谓词消岐和论元标注的模型。<br>本文的模型还是比较简单的，采用了 3层 BiLSTM + Biaffine Scorer的模型架构来处理这个任务。本文的一个亮点就是对 Biaffine Scorer进行了加强，加入了 bias term。同时，类似于 Biaffine Parser，本文对 predicate和 argument也利用两个不同的 W进行了非线性编码。<br>本文在 CoNLL-2008和 CoNLL-2009的数据集上都取得了目前最高的结果。</p>
+<h2 id="Syntactic-Scaffolds-for-Semantic-Structures"><a href="#Syntactic-Scaffolds-for-Semantic-Structures" class="headerlink" title="Syntactic Scaffolds for Semantic Structures"></a>Syntactic Scaffolds for Semantic Structures</h2><p>本篇论文提出了一个利用 multi-task learning的方法利用短语结构句法树 (在 PropBank SRL实验上利用的是 OntoNotes 5.0，和 CoNLL-2012 SRL数据是完整重叠的。CoNLL-2012 SRL就是 OntoNotes 5.0)进行语义任务的处理，称之为句法“梯子”。<br>模型主要通过将句法端的 span作为模型句法部分的训练目标；同时，在进行语义预测的时候，利用强化的 span表示进行 argument的预测：1）BiLSTM产生的上下文相关的表示；2）attention机制产生的 span summary；3）span的特征。</p>
+<h2 id="An-Empirical-Study-of-Building-a-Strong-Baseline-for-Constituency-Parsing"><a href="#An-Empirical-Study-of-Building-a-Strong-Baseline-for-Constituency-Parsing" class="headerlink" title="An Empirical Study of Building a Strong Baseline for Constituency Parsing"></a>An Empirical Study of Building a Strong Baseline for Constituency Parsing</h2><p>在这边插播一个短语结构树句法的工作，本篇文章是 EMNLP2018年的一篇short。本文利用最近在 NLG领域一些比较新颖的技术来提升基于 sequence-to-sequence的 constitutency parsering。并且取得了比较好的结果。利用了一些技术，比如 subword（BPE），unknown token embedding as a bias, multi-task learning, output length controlling, pre-trained word embedding, model ensemble and LM reranking. 本文的实验结果还是比较详细的，能够从实验结果中看出每一个 technic带来的效益是多少。</p>
+<h2 id="Multi-Task-Identification-of-Entities-Relations-and-Coreference-for-Scientific-Knowledge-Graph-Construction"><a href="#Multi-Task-Identification-of-Entities-Relations-and-Coreference-for-Scientific-Knowledge-Graph-Construction" class="headerlink" title="Multi-Task Identification of Entities, Relations, and Coreference for Scientific Knowledge Graph Construction"></a>Multi-Task Identification of Entities, Relations, and Coreference for Scientific Knowledge Graph Construction</h2><p>这篇文章是 18年 EMNLP的一篇文章，是华盛顿大学的一篇文章。本文利用了之前他们组的积累，span-based model来处理科学知识图谱的构建。将三个任务做一个multi-task learning，实体的识别，实体之间关系的识别，以及指代消歧。除了这个 multi-task learning的模块之外，本文还发布了一个数据集，并且在此基础上构建了科学知识图谱。</p>
+<h2 id="Deep-MultiTask-Learning-for-Semantic-Dependency-Parsing"><a href="#Deep-MultiTask-Learning-for-Semantic-Dependency-Parsing" class="headerlink" title="Deep MultiTask Learning for Semantic Dependency Parsing"></a>Deep MultiTask Learning for Semantic Dependency Parsing</h2><p>本篇文章是 2017 ACL的一篇长文。文章的主要工作是提出了一个基于深度神经网络的框架来讲一个句子分析称3种语义依存图。本文的主要贡献有两个，1）提出了一个比较好的 baseline. 2）探究了两种应用于 multitask learning的方法：parameter sharing and higher-order structure scores.</p>
+<h2 id="Graph-Convolutional-Networks-for-Text-Classification"><a href="#Graph-Convolutional-Networks-for-Text-Classification" class="headerlink" title="Graph Convolutional Networks for Text Classification"></a>Graph Convolutional Networks for Text Classification</h2><p>本文是 AAAI2019的一篇工作，本文利用 GCN来处理文本分类，本文的主要贡献在于利用 GCN，将数据集的所有的 word以及 document是作为 node，然后通过建立邻接矩阵A，利用了两层 GCN来达到分类的目的。</p>
+<h2 id="Syntax-aware-Neural-Semantic-Role-Labeling-with-Supertags"><a href="#Syntax-aware-Neural-Semantic-Role-Labeling-with-Supertags" class="headerlink" title="Syntax-aware Neural Semantic Role Labeling with Supertags"></a>Syntax-aware Neural Semantic Role Labeling with Supertags</h2><p>本文是 NAACL-2019的一篇短文。本文利用了前人提出的 Supertags，作为一种 external embeddings输入到 SRL模型中。本文的贡献在于提出了一个 TAG supertags，略微区别于前人提出的一些 supertags，略有提升效果。在 ELMo的加持下，略有提升（没有 significant test）。</p>
+<h2 id="Towards-Semi-Supervised-Learning-for-Deep-Semantic-Role-Labeling"><a href="#Towards-Semi-Supervised-Learning-for-Deep-Semantic-Role-Labeling" class="headerlink" title="Towards Semi-Supervised Learning for Deep Semantic Role Labeling"></a>Towards Semi-Supervised Learning for Deep Semantic Role Labeling</h2><p>文本是 EMNLP-2018年的一篇短文。本文提出，在训练基于神经网络的模型的时候加入句法结构能够获得鲁棒的性能，特别是对于低资源的情况。本文的贡献在于：1）在训练模型的时候将句法树作为硬约束，2）半监督的模型。大部分前人的工作都是在 decoder部分引入 constraints，本文则在 training部分引入 constraints。</p>
+<h2 id="Constituency-Parsing-with-a-Self-Attentive-Encoder"><a href="#Constituency-Parsing-with-a-Self-Attentive-Encoder" class="headerlink" title="Constituency Parsing with a Self-Attentive Encoder"></a>Constituency Parsing with a Self-Attentive Encoder</h2><p>插播一个 短语结构树的 论文，这个论文利用了 self-attention as the encoder，本文主要记录主要的 self-attention部分的见解</p>
+<ol>
+<li>hamming loss </li>
+<li>only + 0.45% compared with the BiLSTM encoder</li>
+</ol>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">semantic knowledge</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">SRL</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/11/19/SRL-papers/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2017/05/09/GN3Parser-POS/" class="archive-article-date">
-  	<time datetime="2017-05-09T01:35:27.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-05-09</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2019/11/09/Chinese-SRL/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Chinese-SRL</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/05/09/GN3Parser-POS/">GN3Parser-POS</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">work</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
+
+  
 
 
           </div>
@@ -293,8 +408,8 @@ var _hmt = _hmt || [];
 	var yiliaConfig = {
 		mathjax: true,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
