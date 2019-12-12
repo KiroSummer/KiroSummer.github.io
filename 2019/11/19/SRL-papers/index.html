@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="Kiro&#39;s Blog">
 <meta property="og:description" content="简介新开一篇博客，记录在阅读AMR论文的时候的一些收获。">
 <meta property="og:locale" content="zh-Han">
-<meta property="og:updated_time" content="2019-11-18T13:08:34.595Z">
+<meta property="og:updated_time" content="2019-12-12T02:36:53.096Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="SRL-papers">
 <meta name="twitter:description" content="简介新开一篇博客，记录在阅读AMR论文的时候的一些收获。">
@@ -208,6 +208,7 @@ var _hmt = _hmt || [];
     <div class="article-entry" itemprop="articleBody">
       
         <h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>新开一篇博客，记录在阅读AMR论文的时候的一些收获。<br><a id="more"></a></p>
+<h2 id="Semantic-Role-Labeling-with-Iterative-Structure-Refinement"><a href="#Semantic-Role-Labeling-with-Iterative-Structure-Refinement" class="headerlink" title="Semantic Role Labeling with Iterative Structure Refinement"></a>Semantic Role Labeling with Iterative Structure Refinement</h2><p>本文是 EMNLP-2019的一个工作，任务是 dependency-based SRL.<br>本文提出了一个 sturctured refinement network，用来 refine the output of a baseline model.<br>文章在 CoNLL-2009的数据集上进行了测试，其中英文的 improvement为 +0.34(90.99 - 90.65) F1 score.</p>
 <h2 id="Syntax-aware-Multilingual-Semantic-Role-Labeling"><a href="#Syntax-aware-Multilingual-Semantic-Role-Labeling" class="headerlink" title="Syntax-aware Multilingual Semantic Role Labeling"></a>Syntax-aware Multilingual Semantic Role Labeling</h2><p>本片论文做的是多语言的 SRL，语料来自于 (CoNLL-2009)。本文的基础模型是 BiLSTM+Biaffine Scorer，利用了官方提供的句法，在此基础上提出了一种新的 argument pruning方式，主要思想类似于 TPF，也是给每个位置抽取一个 tuple，然后根据 tuple的频率进行修剪，取得了 SOTA的结果。</p>
 <h2 id="A-Progressive-Learning-Approach-to-Chinese-SRL-Using-Heterogeneous-Data"><a href="#A-Progressive-Learning-Approach-to-Chinese-SRL-Using-Heterogeneous-Data" class="headerlink" title="A Progressive Learning Approach to Chinese SRL Using Heterogeneous Data"></a>A Progressive Learning Approach to Chinese SRL Using Heterogeneous Data</h2><p>该篇论文主要利用 PNN+Gated Recurrent Adapter构建了一个可以利用异构数据的 SRL分析器。另外，还发布了一个数据 CSB。但是，和我的目标（尝试了解 SRL）并不一致。<br>本文几个重点：</p>
 <ol>
@@ -507,7 +508,7 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">neural-network</a>
+                <a href="javascript:void(0)" class="js-tag color4">git</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -515,23 +516,15 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">neural-network</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">mathjax</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">git</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">python</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">c</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">flush</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -543,7 +536,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">semantic knowledge</a>
+                <a href="javascript:void(0)" class="js-tag color1">flush</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">c</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -555,7 +552,7 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Meta-Learning</a>
+                <a href="javascript:void(0)" class="js-tag color4">semantic knowledge</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -591,11 +588,15 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Markdown</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">停用词表</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Markdown</a>
+                <a href="javascript:void(0)" class="js-tag color4">Meta-Learning</a>
               </li>
              
               <li class="article-tag-list-item">
