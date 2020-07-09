@@ -15,7 +15,7 @@
 <meta property="og:site_name" content="Kiro&#39;s Blog">
 <meta property="og:description" content="本篇博客用来记录看过的一些 BERT相关的论文">
 <meta property="og:locale" content="zh-Han">
-<meta property="og:updated_time" content="2020-06-23T12:31:08.481Z">
+<meta property="og:updated_time" content="2020-07-08T07:24:35.509Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="BERT-papers">
 <meta name="twitter:description" content="本篇博客用来记录看过的一些 BERT相关的论文">
@@ -207,6 +207,10 @@ var _hmt = _hmt || [];
     <div class="article-entry" itemprop="articleBody">
       
         <p>本篇博客用来记录看过的一些 BERT相关的论文<br><a id="more"></a></p>
+<h2 id="Syntactic-Structure-Distillation-Pretraining-For-Bidirectional-Encoders"><a href="#Syntactic-Structure-Distillation-Pretraining-For-Bidirectional-Encoders" class="headerlink" title="Syntactic Structure Distillation Pretraining For Bidirectional Encoders"></a>Syntactic Structure Distillation Pretraining For Bidirectional Encoders</h2><ol>
+<li>何为 RNNG，是一个 syntactic language model that defines the joint probability of  surface strings x and  phrase-strcture nonternimals y.</li>
+</ol>
+<h2 id="SentiLR-Linguistic-Knowledge-Enhanced-Language-Representation-for-Sentiment-Analysis"><a href="#SentiLR-Linguistic-Knowledge-Enhanced-Language-Representation-for-Sentiment-Analysis" class="headerlink" title="SentiLR: Linguistic Knowledge Enhanced Language Representation for Sentiment Analysis"></a>SentiLR: Linguistic Knowledge Enhanced Language Representation for Sentiment Analysis</h2><p>引入了两个 word-level linguistic knowledge: PoS and SentiWordNet. 设计了一个 label-aware masked language model task.<br>输入额外加了 PoS and SentiWord info，利用另外两个 subtasks，和 600w级别的数据进行了 fine-tuning</p>
 <h2 id="What-does-BERT-learn-about-the-structure-of-language"><a href="#What-does-BERT-learn-about-the-structure-of-language" class="headerlink" title="What does BERT learn about the structure of language?"></a>What does BERT learn about the structure of language?</h2><p>ACL-2019。<br>测试 chunk: CoNLL-2000数据。如何抽取 span的表示？一个 span的开头、结尾：+，*，-。t-SNE，a non-linear method to visuilize high-dimensinal data by dimensionality reducing algorithm<br>本文通过将 BERT的各个 layer应用到各个不同的任务，发现了 BERT的底层表示蕴含了基本的短语级别的信息、中层蕴含了句法级别的信息、高层蕴含了语义级别的信息。</p>
 
       
@@ -467,15 +471,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">neural-network</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">neural network</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">git</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">neural-network</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -483,7 +483,19 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Meta-Learning</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">neural network</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">python</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">flush</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -495,11 +507,7 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">flush</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Meta-Learning</a>
+                <a href="javascript:void(0)" class="js-tag color2">c</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -507,19 +515,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">c</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">SRL</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">semantic knowledge</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">eigen</a>
+                <a href="javascript:void(0)" class="js-tag color4">SRL</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -528,6 +528,10 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">CRF</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">eigen</a>
               </li>
              
               <li class="article-tag-list-item">
