@@ -15,7 +15,7 @@
 <meta property="og:site_name" content="Kiro&#39;s Blog">
 <meta property="og:description" content="本篇博客用来记录看过的一些 BERT相关的论文">
 <meta property="og:locale" content="zh-Han">
-<meta property="og:updated_time" content="2020-07-27T09:47:16.549Z">
+<meta property="og:updated_time" content="2020-08-01T01:21:00.582Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="BERT-papers">
 <meta name="twitter:description" content="本篇博客用来记录看过的一些 BERT相关的论文">
@@ -207,7 +207,8 @@ var _hmt = _hmt || [];
     <div class="article-entry" itemprop="articleBody">
       
         <p>本篇博客用来记录看过的一些 BERT相关的论文<br><a id="more"></a></p>
-<h2 id="记录实验"><a href="#记录实验" class="headerlink" title="记录实验"></a>记录实验</h2><h4 id="Chinese-SRL-for-journal"><a href="#Chinese-SRL-for-journal" class="headerlink" title="Chinese-SRL for journal"></a>Chinese-SRL for journal</h4><table>
+<h2 id="记录实验"><a href="#记录实验" class="headerlink" title="记录实验"></a>记录实验</h2><h4 id="Chinese-SRL-for-journal"><a href="#Chinese-SRL-for-journal" class="headerlink" title="Chinese-SRL for journal"></a>Chinese-SRL for journal</h4><p><strong>fine-tuning</strong></p>
+<table>
 <thead>
 <tr>
 <th><strong>Path</strong></th>
@@ -218,10 +219,21 @@ var _hmt = _hmt || [];
 </thead>
 <tbody>
 <tr>
+<td>AI ~/kiro/syntax-aware-BERT-SRL/exp-conll09-BERT-aware-SRL</td>
 <td></td>
+<td>88.19, 88.52, 88.35</td>
+<td>88.57, 88.67, 88.62</td>
+</tr>
+<tr>
+<td>AI ~/kiro/syntax-aware-BERT-SRL/exp-conll09-BERT-based-syntax-aware-SRL-idea2</td>
+<td></td>
+<td>87.94, 88.58, 88.26</td>
+<td>88.26, 88.32, 88.29</td>
 </tr>
 </tbody>
 </table>
+<h2 id="SpanBERT-Improving-Pre-training-by-Representing-and-Predicting-Spans"><a href="#SpanBERT-Improving-Pre-training-by-Representing-and-Predicting-Spans" class="headerlink" title="SpanBERT: Improving Pre-training by Representing and Predicting Spans"></a>SpanBERT: Improving Pre-training by Representing and Predicting Spans</h2><p>Goal: that is designed to better represent and predict spans of text<br>和BERT主要区别在两个地方：1）mask scheme，span VS token 2）training objective：span boundary objective<br>选择 span的方法：随机？没有意义…，是否可以对 span的选择做一些设定，比如 NP, VP？</p>
+<h2 id="Pre-trained-Models-for-Natural-Language-Processing-A-Survey"><a href="#Pre-trained-Models-for-Natural-Language-Processing-A-Survey" class="headerlink" title="Pre-trained Models for Natural Language Processing: A Survey"></a>Pre-trained Models for Natural Language Processing: A Survey</h2><p>ULMFiT: 探究了 fine-tuning的一些策略</p>
 <h2 id="Syntactic-Structure-Distillation-Pretraining-For-Bidirectional-Encoders"><a href="#Syntactic-Structure-Distillation-Pretraining-For-Bidirectional-Encoders" class="headerlink" title="Syntactic Structure Distillation Pretraining For Bidirectional Encoders"></a>Syntactic Structure Distillation Pretraining For Bidirectional Encoders</h2><ol>
 <li>何为 RNNG，是一个 syntactic language model that defines the joint probability of  surface strings x and  phrase-strcture nonternimals y.</li>
 </ol>
@@ -478,19 +490,11 @@ MathJax.Hub.Queue(function() {
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">AMR</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">work</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">git</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">neural-network</a>
+                <a href="javascript:void(0)" class="js-tag color4">AMR</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -499,6 +503,14 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">mathjax</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">neural-network</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">git</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -514,19 +526,15 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Meta-Learning</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">flush</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">c</a>
+                <a href="javascript:void(0)" class="js-tag color4">SRL</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">SRL</a>
+                <a href="javascript:void(0)" class="js-tag color2">c</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -535,6 +543,10 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">semantic knowledge</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Meta-Learning</a>
               </li>
              
               <li class="article-tag-list-item">
