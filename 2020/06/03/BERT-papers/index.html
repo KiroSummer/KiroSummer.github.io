@@ -15,7 +15,7 @@
 <meta property="og:site_name" content="Kiro&#39;s Blog">
 <meta property="og:description" content="本篇博客用来记录看过的一些 BERT相关的论文">
 <meta property="og:locale" content="zh-Han">
-<meta property="og:updated_time" content="2020-08-01T01:21:00.582Z">
+<meta property="og:updated_time" content="2020-08-04T06:36:30.594Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="BERT-papers">
 <meta name="twitter:description" content="本篇博客用来记录看过的一些 BERT相关的论文">
@@ -207,7 +207,31 @@ var _hmt = _hmt || [];
     <div class="article-entry" itemprop="articleBody">
       
         <p>本篇博客用来记录看过的一些 BERT相关的论文<br><a id="more"></a></p>
-<h2 id="记录实验"><a href="#记录实验" class="headerlink" title="记录实验"></a>记录实验</h2><h4 id="Chinese-SRL-for-journal"><a href="#Chinese-SRL-for-journal" class="headerlink" title="Chinese-SRL for journal"></a>Chinese-SRL for journal</h4><p><strong>fine-tuning</strong></p>
+<h2 id="记录实验"><a href="#记录实验" class="headerlink" title="记录实验"></a>记录实验</h2><h4 id="Chinese-SRL-for-journal"><a href="#Chinese-SRL-for-journal" class="headerlink" title="Chinese-SRL for journal"></a>Chinese-SRL for journal</h4><p><strong>fixed-feature</strong></p>
+<table>
+<thead>
+<tr>
+<th><strong>Path</strong></th>
+<th><strong>Note</strong></th>
+<th><strong>Dev</strong></th>
+<th><strong>Test</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>AI ~/kiro/syntax-aware-BERT-SRL/exp-conll09-fixed-bert-SRL</td>
+<td>fixed BERT for SRL</td>
+<td>87.86, 89.04, 88.45</td>
+<td>87.99, 88.95, 88.47</td>
+</tr>
+<tr>
+<td>AI ~/kiro/syntax-aware-BERT-SRL/exp-conll09-fixed-bert-syntax-MTL-SRL</td>
+<td>fixed BERT syntax MTL for SRL</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>fine-tuning</strong></p>
 <table>
 <thead>
 <tr>
@@ -490,11 +514,19 @@ MathJax.Hub.Queue(function() {
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">AMR</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">work</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">AMR</a>
+                <a href="javascript:void(0)" class="js-tag color5">neural-network</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">git</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -506,11 +538,7 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">neural-network</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">git</a>
+                <a href="javascript:void(0)" class="js-tag color4">Meta-Learning</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -530,10 +558,6 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">SRL</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">c</a>
               </li>
              
@@ -542,11 +566,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">semantic knowledge</a>
+                <a href="javascript:void(0)" class="js-tag color4">SRL</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Meta-Learning</a>
+                <a href="javascript:void(0)" class="js-tag color4">semantic knowledge</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -578,11 +602,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Markdown</a>
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+                <a href="javascript:void(0)" class="js-tag color4">Markdown</a>
               </li>
              
               <li class="article-tag-list-item">
