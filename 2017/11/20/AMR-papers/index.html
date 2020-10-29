@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="Kiro&#39;s Blog">
 <meta property="og:description" content="简介新开一篇博客，记录在阅读AMR论文的时候的一些收获。">
 <meta property="og:locale" content="zh-Han">
-<meta property="og:updated_time" content="2019-01-21T13:49:53.328Z">
+<meta property="og:updated_time" content="2020-10-27T11:15:56.067Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="AMR-papers">
 <meta name="twitter:description" content="简介新开一篇博客，记录在阅读AMR论文的时候的一些收获。">
@@ -208,7 +208,15 @@ var _hmt = _hmt || [];
     <div class="article-entry" itemprop="articleBody">
       
         <h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>新开一篇博客，记录在阅读AMR论文的时候的一些收获。<br><a id="more"></a></p>
-<h1 id="论文列表以及收获"><a href="#论文列表以及收获" class="headerlink" title="论文列表以及收获"></a>论文列表以及收获</h1><h2 id="Parsing-English-into-Abstract-Meaning-Representation-Using-Syntax-Based-Machine-Translation"><a href="#Parsing-English-into-Abstract-Meaning-Representation-Using-Syntax-Based-Machine-Translation" class="headerlink" title="Parsing English into Abstract Meaning Representation Using Syntax-Based Machine Translation"></a>Parsing English into Abstract Meaning Representation Using Syntax-Based Machine Translation</h2><p>本片论文主要采用了SBMT的方法将English sentences转换成AMR。主要的工作在于，SBMT是一个机器翻译的框架，这个框架所需要的是一个Tree，而AMR Graph是一个有向图。所以，需要做一些Transformation：</p>
+<h1 id="论文列表以及收获"><a href="#论文列表以及收获" class="headerlink" title="论文列表以及收获"></a>论文列表以及收获</h1><h2 id="Broad-Coverage-Semantic-Parsing-as-Transduction"><a href="#Broad-Coverage-Semantic-Parsing-as-Transduction" class="headerlink" title="Broad-Coverage Semantic Parsing as Transduction"></a>Broad-Coverage Semantic Parsing as Transduction</h2><p>Sheng Zhang。这篇文章利用 attention-mechanisms incrementally generate the meaning representation，做了以下几个任务：AMR, SDP, and UCCA<br>文章的一个重点是将图结构转换成 Tree结构，称之为 arborescence</p>
+<h2 id="Core-Semantic-First-A-Top-down-Approach-for-AMR-Parsing"><a href="#Core-Semantic-First-A-Top-down-Approach-for-AMR-Parsing" class="headerlink" title="Core Semantic First: A Top-down Approach for AMR Parsing"></a>Core Semantic First: A Top-down Approach for AMR Parsing</h2><p>AMR的几大难点：1）no alignment between nodes and texts, 2) graph is complicated because of reentrancies, and 3) large and sparse vocabulary of possible node types<br>感觉就是 Cai et al., 2020的没有 iterative inference版本</p>
+<h2 id="Improving-AMR-Parsing-with-Sequence-to-Sequence-Pre-training"><a href="#Improving-AMR-Parsing-with-Sequence-to-Sequence-Pre-training" class="headerlink" title="Improving AMR Parsing with Sequence-to-Sequence Pre-training"></a>Improving AMR Parsing with Sequence-to-Sequence Pre-training</h2><p>本篇文章将 AMR Parsing看成一个 Seq2Seq的问题，将 AMR Graph转换成一个 AMR Sequence。<br>Seq2Seq: 1) machine translation: source language -&gt; target language 2) syntactic parsing: text -&gt; linearized constituency trees 3) amr parsing: text -&gt; linearized amr<br>成分句法树和 AMR图是自动生成的，在 MT的语料上。<br>接下来就是 fine-tuning，MTL+fine-tuning</p>
+<h2 id="AMR-Parsing-as-Sequence-to-Graph-Transduction"><a href="#AMR-Parsing-as-Sequence-to-Graph-Transduction" class="headerlink" title="AMR Parsing as Sequence-to-Graph Transduction"></a>AMR Parsing as Sequence-to-Graph Transduction</h2><p>本论文将 AMR Parsing作为 two-stage parsing的工作：1) node prediction, and 2) edge prediction</p>
+<ol>
+<li>node prediction: 使用扩展的 pointer genertor network来处理这个子任务，其中，重点是扩展了让这个 network可以从 target node中 copy node</li>
+<li>edge prediction: biaffine parser.</li>
+</ol>
+<h2 id="Parsing-English-into-Abstract-Meaning-Representation-Using-Syntax-Based-Machine-Translation"><a href="#Parsing-English-into-Abstract-Meaning-Representation-Using-Syntax-Based-Machine-Translation" class="headerlink" title="Parsing English into Abstract Meaning Representation Using Syntax-Based Machine Translation"></a>Parsing English into Abstract Meaning Representation Using Syntax-Based Machine Translation</h2><p>本片论文主要采用了SBMT的方法将English sentences转换成AMR。主要的工作在于，SBMT是一个机器翻译的框架，这个框架所需要的是一个Tree，而AMR Graph是一个有向图。所以，需要做一些Transformation：</p>
 <ol>
 <li>拆分具有多个节点的节点，但是因为这样子的结构过于“扁平”，所以效果不好</li>
 <li>进一步转换，进行 concept reconstruct，role reconstruct等一系列的工作</li>
@@ -349,8 +357,8 @@ var _hmt = _hmt || [];
     </a>
   
   
-    <a href="/2017/07/10/AMR/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">AMR</div>
+    <a href="/2017/05/12/SemanticKnowledgeResearch/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">SemanticKnowledgeResearch</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -505,10 +513,6 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">git</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">neural-network</a>
               </li>
              
@@ -517,19 +521,15 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">git</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">mathjax</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Meta-Learning</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">python</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">flush</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -538,6 +538,14 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">theano</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">flush</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Meta-Learning</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -581,10 +589,6 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">tips</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">amr</a>
               </li>
              
@@ -593,7 +597,7 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">word segmentation</a>
+                <a href="javascript:void(0)" class="js-tag color5">tips</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -606,6 +610,10 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">停用词表</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">word segmentation</a>
               </li>
              
               <li class="article-tag-list-item">
