@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="Kiro&#39;s Blog">
 <meta property="og:description" content="简介新开一篇博客，记录在阅读AMR论文的时候的一些收获。">
 <meta property="og:locale" content="zh-Han">
-<meta property="og:updated_time" content="2020-11-13T07:27:37.976Z">
+<meta property="og:updated_time" content="2020-12-16T02:26:24.390Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="AMR-papers">
 <meta name="twitter:description" content="简介新开一篇博客，记录在阅读AMR论文的时候的一些收获。">
@@ -208,7 +208,8 @@ var _hmt = _hmt || [];
     <div class="article-entry" itemprop="articleBody">
       
         <h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>新开一篇博客，记录在阅读AMR论文的时候的一些收获。<br><a id="more"></a></p>
-<h1 id="论文列表以及收获"><a href="#论文列表以及收获" class="headerlink" title="论文列表以及收获"></a>论文列表以及收获</h1><h2 id="Pushing-the-Limits-of-AMR-Parsing-with-Self-Learning"><a href="#Pushing-the-Limits-of-AMR-Parsing-with-Self-Learning" class="headerlink" title="Pushing the Limits of AMR Parsing with Self-Learning"></a>Pushing the Limits of AMR Parsing with Self-Learning</h2><p>如何获得一个 action Oracle呢，大部分的前人工作都是基于规则和 word-to-node alignments的，本文是如何获得 Oracle的呢？<br>称之为 mining的操作：首先基于 rule-based 的 oracle，调优，看一个新的 action oracle是否能够 smatch大于原来的 oracle action，或者，smatch相等但是步长稍微短一点。<br>Self-Training with Synthetic Text<br>本文的假设：假设一个 gold AMR graph对应着不同的 sentences，模型将会学习的更好，generalize better，那么具体的做法是什么呢？</p>
+<h1 id="论文列表以及收获"><a href="#论文列表以及收获" class="headerlink" title="论文列表以及收获"></a>论文列表以及收获</h1><h2 id="Online-Back-Parsing-for-AMR-to-Text-Generation"><a href="#Online-Back-Parsing-for-AMR-to-Text-Generation" class="headerlink" title="Online Back-Parsing for AMR-to-Text Generation"></a>Online Back-Parsing for AMR-to-Text Generation</h2><p>这篇工作做的是在 AMR-to-Text的 generation过程中，在标准的 decoder当中加入一下 AMR Parsing sub-task来提升性能的工作。那么，motivation是什么呢？就是在产生 word的过程当中，引入 AMR个结构化信息，类似于翻译当中的 back-translation.</p>
+<h2 id="Pushing-the-Limits-of-AMR-Parsing-with-Self-Learning"><a href="#Pushing-the-Limits-of-AMR-Parsing-with-Self-Learning" class="headerlink" title="Pushing the Limits of AMR Parsing with Self-Learning"></a>Pushing the Limits of AMR Parsing with Self-Learning</h2><p>如何获得一个 action Oracle呢，大部分的前人工作都是基于规则和 word-to-node alignments的，本文是如何获得 Oracle的呢？<br>称之为 mining的操作：首先基于 rule-based 的 oracle，调优，看一个新的 action oracle是否能够 smatch大于原来的 oracle action，或者，smatch相等但是步长稍微短一点。<br>Self-Training with Synthetic Text<br>本文的假设：假设一个 gold AMR graph对应着不同的 sentences，模型将会学习的更好，generalize better，那么具体的做法是什么呢？</p>
 <ol>
 <li>使用 SOTA的 AMR-to-Text模型对 gold AMR graph生成 20个 sentences，然后利用 AMR Parser对句子进行 parsing，计算 smatch值，根据规则进行选取</li>
 <li>利用这些句子进行模型的训练，可以得到 81.2 Smatch 在 AMR2.0.</li>
@@ -518,11 +519,19 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">neural-network</a>
+                <a href="javascript:void(0)" class="js-tag color5">work</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">git</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">mathjax</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Meta-Learning</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -534,6 +543,10 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">flush</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Numpy</a>
               </li>
              
@@ -542,19 +555,7 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">work</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">flush</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">git</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Meta-Learning</a>
+                <a href="javascript:void(0)" class="js-tag color5">neural-network</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -566,11 +567,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">RNN</a>
+                <a href="javascript:void(0)" class="js-tag color4">semantic knowledge</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">semantic knowledge</a>
+                <a href="javascript:void(0)" class="js-tag color4">RNN</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -583,14 +584,6 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">eigen</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">amr</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">syntaxnet</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -610,15 +603,23 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">停用词表</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Markdown</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">amr</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">syntaxnet</a>
               </li>
              
               <li class="article-tag-list-item">

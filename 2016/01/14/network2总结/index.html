@@ -9,14 +9,14 @@
   <title>network2总结 | Kiro&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="使用神经网络进行词性标注在有了第一个版本的network的基础上，我们将output层修改为softmax，改掉原来使用的sigmoid。代码修改完之后却发现运行的时候报出overflow的错误，在纠结了许久之后，在导师的帮助下，发现了程序的两个bug：一个是softmax的激活函数，分子上的e次方忘记了加；另外一个就是在feedforward的过程中，把hidden layer的activati">
-<meta name="keywords" content="neural-network,work">
+<meta name="keywords" content="work,neural-network">
 <meta property="og:type" content="article">
 <meta property="og:title" content="network2总结">
 <meta property="og:url" content="http://yoursite.com/2016/01/14/network2总结/index.html">
 <meta property="og:site_name" content="Kiro&#39;s Blog">
 <meta property="og:description" content="使用神经网络进行词性标注在有了第一个版本的network的基础上，我们将output层修改为softmax，改掉原来使用的sigmoid。代码修改完之后却发现运行的时候报出overflow的错误，在纠结了许久之后，在导师的帮助下，发现了程序的两个bug：一个是softmax的激活函数，分子上的e次方忘记了加；另外一个就是在feedforward的过程中，把hidden layer的activati">
 <meta property="og:locale" content="zh-Han">
-<meta property="og:updated_time" content="2019-01-21T13:49:53.333Z">
+<meta property="og:updated_time" content="2019-01-21T13:49:53.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="network2总结">
 <meta name="twitter:description" content="使用神经网络进行词性标注在有了第一个版本的network的基础上，我们将output层修改为softmax，改掉原来使用的sigmoid。代码修改完之后却发现运行的时候报出overflow的错误，在纠结了许久之后，在导师的帮助下，发现了程序的两个bug：一个是softmax的激活函数，分子上的e次方忘记了加；另外一个就是在feedforward的过程中，把hidden layer的activati">
@@ -940,11 +940,11 @@ var _hmt = _hmt || [];
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">neural-network</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">work</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">work</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">neural-network</a>
         		</li>
       		
 		</ul>
@@ -1176,11 +1176,19 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">neural-network</a>
+                <a href="javascript:void(0)" class="js-tag color5">work</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">git</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">mathjax</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Meta-Learning</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1192,6 +1200,10 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">flush</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Numpy</a>
               </li>
              
@@ -1200,19 +1212,7 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">work</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">flush</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">git</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Meta-Learning</a>
+                <a href="javascript:void(0)" class="js-tag color5">neural-network</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1224,11 +1224,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">RNN</a>
+                <a href="javascript:void(0)" class="js-tag color4">semantic knowledge</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">semantic knowledge</a>
+                <a href="javascript:void(0)" class="js-tag color4">RNN</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1241,14 +1241,6 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">eigen</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">amr</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">syntaxnet</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -1268,15 +1260,23 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">停用词表</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Markdown</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">amr</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">syntaxnet</a>
               </li>
              
               <li class="article-tag-list-item">
