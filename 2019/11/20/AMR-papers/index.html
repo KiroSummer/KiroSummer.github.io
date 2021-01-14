@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="Kiro&#39;s Blog">
 <meta property="og:description" content="简介新开一篇博客，记录在阅读AMR论文的时候的一些收获。">
 <meta property="og:locale" content="zh-Han">
-<meta property="og:updated_time" content="2021-01-11T03:33:04.869Z">
+<meta property="og:updated_time" content="2021-01-12T07:11:38.443Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="AMR-papers">
 <meta name="twitter:description" content="简介新开一篇博客，记录在阅读AMR论文的时候的一些收获。">
@@ -209,7 +209,8 @@ var _hmt = _hmt || [];
       
         <h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>新开一篇博客，记录在阅读AMR论文的时候的一些收获。<br><a id="more"></a></p>
 <h1 id="论文列表以及收获"><a href="#论文列表以及收获" class="headerlink" title="论文列表以及收获"></a>论文列表以及收获</h1><h2 id="Online-Back-Parsing-for-AMR-to-Text-Generation"><a href="#Online-Back-Parsing-for-AMR-to-Text-Generation" class="headerlink" title="Online Back-Parsing for AMR-to-Text Generation"></a>Online Back-Parsing for AMR-to-Text Generation</h2><p>这篇工作做的是在 AMR-to-Text的 generation过程中，在标准的 decoder当中加入一下 AMR Parsing sub-task来提升性能的工作。那么，motivation是什么呢？就是在产生 word的过程当中，引入 AMR个结构化信息，类似于翻译当中的 back-translation.</p>
-<h2 id="Pushing-the-Limits-of-AMR-Parsing-with-Self-Learning"><a href="#Pushing-the-Limits-of-AMR-Parsing-with-Self-Learning" class="headerlink" title="Pushing the Limits of AMR Parsing with Self-Learning"></a>Pushing the Limits of AMR Parsing with Self-Learning</h2><p>效果上来看提升了一个点左右<br>如何获得一个 action Oracle呢，大部分的前人工作都是基于规则和 word-to-node alignments的，本文是如何获得 Oracle的呢？<br>称之为 mining的操作：首先基于 rule-based 的 oracle，调优，看一个新的 action oracle是否能够 smatch大于原来的 oracle action，或者，smatch相等但是步长稍微短一点。<br>Self-Training with Synthetic Text<br>本文的假设：假设一个 gold AMR graph对应着不同的 sentences，模型将会学习的更好，generalize better，那么具体的做法是什么呢？</p>
+<h2 id="Improving-AMR-Parsing-with-Sequence-to-Sequence-Pre-training"><a href="#Improving-AMR-Parsing-with-Sequence-to-Sequence-Pre-training" class="headerlink" title="Improving AMR Parsing with Sequence-to-Sequence Pre-training"></a>Improving AMR Parsing with Sequence-to-Sequence Pre-training</h2><p>如何把 AMR graph变成 sequence：移除 variables and wiki links。其中，移除 variables的时候，需要重复 some nodes。使用别人的脚本进行后处理。<br>采用了三个任务：Machine Translation, Constituent Parsing, and AMR Parsing<br>Tricks：1）在 decoder端加入 task-specific tag</p>
+<h2 id="Pushing-the-Limits-of-AMR-Parsing-with-Self-Learning"><a href="#Pushing-the-Limits-of-AMR-Parsing-with-Self-Learning" class="headerlink" title="Pushing the Limits of AMR Parsing with Self-Learning"></a>Pushing the Limits of AMR Parsing with Self-Learning</h2><p>效果上来看提升了一个点左右，更加吸引我的一个地方：RoBERTa layer average [1:]，提升的效果更加大一点<br>如何获得一个 action Oracle呢，大部分的前人工作都是基于规则和 word-to-node alignments的，本文是如何获得 Oracle的呢？<br>称之为 mining的操作：首先基于 rule-based 的 oracle，调优，看一个新的 action oracle是否能够 smatch大于原来的 oracle action，或者，smatch相等但是步长稍微短一点。<br>Self-Training with Synthetic Text<br>本文的假设：假设一个 gold AMR graph对应着不同的 sentences，模型将会学习的更好，generalize better，那么具体的做法是什么呢？</p>
 <ol>
 <li>使用 SOTA的 AMR-to-Text模型对 gold AMR graph生成 20个 sentences，然后利用 AMR Parser对句子进行 parsing，计算 smatch值，根据规则进行选取</li>
 <li>利用这些句子进行模型的训练，可以得到 81.2 Smatch 在 AMR2.0.</li>
@@ -220,7 +221,7 @@ var _hmt = _hmt || [];
 </ol>
 <h2 id="Broad-Coverage-Semantic-Parsing-as-Transduction"><a href="#Broad-Coverage-Semantic-Parsing-as-Transduction" class="headerlink" title="Broad-Coverage Semantic Parsing as Transduction"></a>Broad-Coverage Semantic Parsing as Transduction</h2><p>Sheng Zhang。这篇文章利用 attention-mechanisms incrementally generate the meaning representation，做了以下几个任务：AMR, SDP, and UCCA<br>文章的一个重点是将图结构转换成 Tree结构，称之为 arborescence</p>
 <h2 id="Core-Semantic-First-A-Top-down-Approach-for-AMR-Parsing"><a href="#Core-Semantic-First-A-Top-down-Approach-for-AMR-Parsing" class="headerlink" title="Core Semantic First: A Top-down Approach for AMR Parsing"></a>Core Semantic First: A Top-down Approach for AMR Parsing</h2><p>AMR的几大难点：1）no alignment between nodes and texts, 2) graph is complicated because of reentrancies, and 3) large and sparse vocabulary of possible node types<br>感觉就是 Cai et al., 2020的没有 iterative inference版本</p>
-<h2 id="Improving-AMR-Parsing-with-Sequence-to-Sequence-Pre-training"><a href="#Improving-AMR-Parsing-with-Sequence-to-Sequence-Pre-training" class="headerlink" title="Improving AMR Parsing with Sequence-to-Sequence Pre-training"></a>Improving AMR Parsing with Sequence-to-Sequence Pre-training</h2><p>本篇文章将 AMR Parsing看成一个 Seq2Seq的问题，将 AMR Graph转换成一个 AMR Sequence。<br>Seq2Seq: 1) machine translation: source language -&gt; target language 2) syntactic parsing: text -&gt; linearized constituency trees 3) amr parsing: text -&gt; linearized amr<br>成分句法树和 AMR图是自动生成的，在 MT的语料上。<br>接下来就是 fine-tuning，MTL+fine-tuning</p>
+<h2 id="Improving-AMR-Parsing-with-Sequence-to-Sequence-Pre-training-1"><a href="#Improving-AMR-Parsing-with-Sequence-to-Sequence-Pre-training-1" class="headerlink" title="Improving AMR Parsing with Sequence-to-Sequence Pre-training"></a>Improving AMR Parsing with Sequence-to-Sequence Pre-training</h2><p>本篇文章将 AMR Parsing看成一个 Seq2Seq的问题，将 AMR Graph转换成一个 AMR Sequence。<br>Seq2Seq: 1) machine translation: source language -&gt; target language 2) syntactic parsing: text -&gt; linearized constituency trees 3) amr parsing: text -&gt; linearized amr<br>成分句法树和 AMR图是自动生成的，在 MT的语料上。<br>接下来就是 fine-tuning，MTL+fine-tuning</p>
 <h2 id="AMR-Parsing-as-Sequence-to-Graph-Transduction"><a href="#AMR-Parsing-as-Sequence-to-Graph-Transduction" class="headerlink" title="AMR Parsing as Sequence-to-Graph Transduction"></a>AMR Parsing as Sequence-to-Graph Transduction</h2><p>本论文将 AMR Parsing作为 two-stage parsing的工作：1) node prediction, and 2) edge prediction</p>
 <ol>
 <li>node prediction: 使用扩展的 pointer genertor network来处理这个子任务，其中，重点是扩展了让这个 network可以从 target node中 copy node</li>
@@ -531,15 +532,15 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">mathjax</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Meta-Learning</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">neural network</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">mathjax</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -575,10 +576,6 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">eigen</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">机器学习</a>
               </li>
              
@@ -587,15 +584,11 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">eigen</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">word2vec</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">amr</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">syntaxnet</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -611,19 +604,27 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">停用词表</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Markdown</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
+                <a href="javascript:void(0)" class="js-tag color4">amr</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">syntaxnet</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">word segmentation</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">停用词表</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">随笔</a>
               </li>
              
               <li class="article-tag-list-item">
