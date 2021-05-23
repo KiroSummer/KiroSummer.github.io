@@ -15,7 +15,7 @@
 <meta property="og:site_name" content="Kiro&#39;s Blog">
 <meta property="og:description" content="An Effective Transition-based Model for Discontinuous NER本文的任务是 discontinuous NER，用了三个数据集，CADEC, ShARe 13, ShARe 14。本文还讲解了普通的 NER，discontinuous NER，和 nested NER的区别。对于本文研究的任务，作者提出了一个 transition-based p">
 <meta property="og:locale" content="zh-Han">
-<meta property="og:updated_time" content="2021-05-20T11:41:29.709Z">
+<meta property="og:updated_time" content="2021-05-23T08:41:57.906Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="ner">
 <meta name="twitter:description" content="An Effective Transition-based Model for Discontinuous NER本文的任务是 discontinuous NER，用了三个数据集，CADEC, ShARe 13, ShARe 14。本文还讲解了普通的 NER，discontinuous NER，和 nested NER的区别。对于本文研究的任务，作者提出了一个 transition-based p">
@@ -203,6 +203,11 @@ var _hmt = _hmt || [];
     <div class="article-entry" itemprop="articleBody">
       
         <h2 id="An-Effective-Transition-based-Model-for-Discontinuous-NER"><a href="#An-Effective-Transition-based-Model-for-Discontinuous-NER" class="headerlink" title="An Effective Transition-based Model for Discontinuous NER"></a>An Effective Transition-based Model for Discontinuous NER</h2><p>本文的任务是 discontinuous NER，用了三个数据集，CADEC, ShARe 13, ShARe 14。本文还讲解了普通的 NER，discontinuous NER，和 nested NER的区别。对于本文研究的任务，作者提出了一个 transition-based parser.<br>本文中一个有意思的点是，fine-tuning BERT居然不如 ELMo as feature extraction。<br>本文中的 Stack-LSTM是我理解的那个 stack LSTM吗？<br>看本文的收获：analysis还可以这么写，详细的分析了数据中 discontinuous NER的类别，比例，因此进行相关的实验分析：看模型在这些类别中的试验结果。</p>
+<p>看 github的 issue，作者用的是 CADEC.v2</p>
+<h4 id="对-CADEC数据的处理"><a href="#对-CADEC数据的处理" class="headerlink" title="对 CADEC数据的处理"></a>对 CADEC数据的处理</h4><ol>
+<li>extract 6318 annotations</li>
+<li>1250 documents, 7597 sentences, 122938 tokens</li>
+</ol>
 
       
 
@@ -449,10 +454,6 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">work</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">SRL</a>
               </li>
              
@@ -461,7 +462,19 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">work</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">neural-network</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">depparser</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">amr</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -470,14 +483,6 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">mathjax</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Meta-Learning</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">depparser</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -490,6 +495,10 @@ MathJax.Hub.Queue(function() {
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">theano</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Meta-Learning</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -541,7 +550,7 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">Markdown</a>
+                <a href="javascript:void(0)" class="js-tag color5">tips</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -553,11 +562,7 @@ MathJax.Hub.Queue(function() {
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">amr</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">tips</a>
+                <a href="javascript:void(0)" class="js-tag color4">Markdown</a>
               </li>
             
             <div class="clearfix"></div>
